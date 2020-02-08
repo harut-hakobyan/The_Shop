@@ -48,19 +48,39 @@ namespace The_Shop
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            MySqlCommand mysql_query = DbConnector.conn.CreateCommand();
-            mysql_query.CommandText = $"SELECT ID,Name,Quantity,Picture FROM Warehouse WHERE ID = '{idProd}'";
-            MySqlDataReader mysql_result;
-            mysql_result = mysql_query.ExecuteReader();
-            while (mysql_result.Read())
+            if (ProductListBox.SelectedIndex != -1)
             {
-                Product.name = mysql_result.GetString(1).ToString();
-                Product.picture = mysql_result.GetString(3).ToString();
+                MySqlCommand mysql_query = DbConnector.conn.CreateCommand();
+                mysql_query.CommandText = $"SELECT ID,Name,Quantity,Picture FROM Warehouse WHERE ID = '{idProd}'";
+                MySqlDataReader mysql_result;
+                mysql_result = mysql_query.ExecuteReader();
+                while (mysql_result.Read())
+                {
+                    Product.name = mysql_result.GetString(1).ToString();
+                    Product.picture = mysql_result.GetString(3).ToString();
+                }
+                Product.price = (double)PriceBox.Value;
+                Product.quantity = (int)QuantityBox.Value;
+                mysql_result.Close();
+                DialogResult = DialogResult.OK;
             }
-            Product.price = (double)PriceBox.Value;
-            Product.quantity = (int)QuantityBox.Value;
-            mysql_result.Close();
-            DialogResult = DialogResult.OK;
+            else
+                MessageBox.Show("Select product to add");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Abort;
         }
     }
 }

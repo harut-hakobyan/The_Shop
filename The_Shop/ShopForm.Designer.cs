@@ -41,7 +41,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.Item3Button = new System.Windows.Forms.Button();
             this.drinksLabel = new System.Windows.Forms.Label();
-            this.DrinksPanel = new System.Windows.Forms.Panel();
+            this.Items1Panel = new System.Windows.Forms.Panel();
             this.Item5Label = new System.Windows.Forms.Label();
             this.Item4Label = new System.Windows.Forms.Label();
             this.Item3Label = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             this.Item3Price = new System.Windows.Forms.Label();
             this.Item2Price = new System.Windows.Forms.Label();
             this.Item1Price = new System.Windows.Forms.Label();
-            this.FruitsPanel = new System.Windows.Forms.Panel();
+            this.Items2Panel = new System.Windows.Forms.Panel();
             this.Item10Label = new System.Windows.Forms.Label();
             this.Item9Label = new System.Windows.Forms.Label();
             this.Item8Label = new System.Windows.Forms.Label();
@@ -63,7 +63,7 @@
             this.Item8Price = new System.Windows.Forms.Label();
             this.Item7Price = new System.Windows.Forms.Label();
             this.Item6Price = new System.Windows.Forms.Label();
-            this.CandyiesPanel = new System.Windows.Forms.Panel();
+            this.Items3Panel = new System.Windows.Forms.Panel();
             this.Item15Label = new System.Windows.Forms.Label();
             this.Item14Label = new System.Windows.Forms.Label();
             this.Item13Label = new System.Windows.Forms.Label();
@@ -87,11 +87,7 @@
             this.Item12Button = new System.Windows.Forms.Button();
             this.Item14Button = new System.Windows.Forms.Button();
             this.Item15Button = new System.Windows.Forms.Button();
-            this.item1_1 = new System.Windows.Forms.Panel();
-            this.item1_2 = new System.Windows.Forms.Panel();
-            this.item1_4 = new System.Windows.Forms.Panel();
-            this.item1_3 = new System.Windows.Forms.Panel();
-            this.item1_5 = new System.Windows.Forms.Panel();
+            this.item1 = new System.Windows.Forms.Panel();
             this.item2_5 = new System.Windows.Forms.Panel();
             this.item2_4 = new System.Windows.Forms.Panel();
             this.item2_2 = new System.Windows.Forms.Panel();
@@ -103,14 +99,24 @@
             this.item3_3 = new System.Windows.Forms.Panel();
             this.item3_1 = new System.Windows.Forms.Panel();
             this.AccountingButton = new System.Windows.Forms.Button();
+            this.Pictures1Panel = new System.Windows.Forms.Panel();
+            this.item2 = new System.Windows.Forms.Panel();
+            this.item3 = new System.Windows.Forms.Panel();
+            this.item4 = new System.Windows.Forms.Panel();
+            this.item5 = new System.Windows.Forms.Panel();
+            this.Pictures2Panel = new System.Windows.Forms.Panel();
+            this.Pictures3Panel = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BasketPictureBox)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.DrinksPanel.SuspendLayout();
-            this.FruitsPanel.SuspendLayout();
-            this.CandyiesPanel.SuspendLayout();
+            this.Items1Panel.SuspendLayout();
+            this.Items2Panel.SuspendLayout();
+            this.Items3Panel.SuspendLayout();
+            this.Pictures1Panel.SuspendLayout();
+            this.Pictures2Panel.SuspendLayout();
+            this.Pictures3Panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -281,23 +287,23 @@
             this.drinksLabel.TabIndex = 40;
             this.drinksLabel.Text = "Drinks";
             // 
-            // DrinksPanel
+            // Items1Panel
             // 
-            this.DrinksPanel.BackgroundImage = global::The_Shop.Properties.Resources.woodLong;
-            this.DrinksPanel.Controls.Add(this.Item5Label);
-            this.DrinksPanel.Controls.Add(this.Item4Label);
-            this.DrinksPanel.Controls.Add(this.Item3Label);
-            this.DrinksPanel.Controls.Add(this.Item2Label);
-            this.DrinksPanel.Controls.Add(this.Item1Label);
-            this.DrinksPanel.Controls.Add(this.Item5Price);
-            this.DrinksPanel.Controls.Add(this.Item4Price);
-            this.DrinksPanel.Controls.Add(this.Item3Price);
-            this.DrinksPanel.Controls.Add(this.Item2Price);
-            this.DrinksPanel.Controls.Add(this.Item1Price);
-            this.DrinksPanel.Location = new System.Drawing.Point(46, 86);
-            this.DrinksPanel.Name = "DrinksPanel";
-            this.DrinksPanel.Size = new System.Drawing.Size(421, 49);
-            this.DrinksPanel.TabIndex = 59;
+            this.Items1Panel.BackgroundImage = global::The_Shop.Properties.Resources.woodLong;
+            this.Items1Panel.Controls.Add(this.Item5Label);
+            this.Items1Panel.Controls.Add(this.Item4Label);
+            this.Items1Panel.Controls.Add(this.Item3Label);
+            this.Items1Panel.Controls.Add(this.Item2Label);
+            this.Items1Panel.Controls.Add(this.Item1Label);
+            this.Items1Panel.Controls.Add(this.Item5Price);
+            this.Items1Panel.Controls.Add(this.Item4Price);
+            this.Items1Panel.Controls.Add(this.Item3Price);
+            this.Items1Panel.Controls.Add(this.Item2Price);
+            this.Items1Panel.Controls.Add(this.Item1Price);
+            this.Items1Panel.Location = new System.Drawing.Point(46, 86);
+            this.Items1Panel.Name = "Items1Panel";
+            this.Items1Panel.Size = new System.Drawing.Size(421, 49);
+            this.Items1Panel.TabIndex = 59;
             // 
             // Item5Label
             // 
@@ -419,23 +425,23 @@
             this.Item1Price.TabIndex = 62;
             this.Item1Price.Text = "000";
             // 
-            // FruitsPanel
+            // Items2Panel
             // 
-            this.FruitsPanel.BackgroundImage = global::The_Shop.Properties.Resources.woodLong;
-            this.FruitsPanel.Controls.Add(this.Item10Label);
-            this.FruitsPanel.Controls.Add(this.Item9Label);
-            this.FruitsPanel.Controls.Add(this.Item8Label);
-            this.FruitsPanel.Controls.Add(this.Item7Label);
-            this.FruitsPanel.Controls.Add(this.Item6Label);
-            this.FruitsPanel.Controls.Add(this.Item10Price);
-            this.FruitsPanel.Controls.Add(this.Item9Price);
-            this.FruitsPanel.Controls.Add(this.Item8Price);
-            this.FruitsPanel.Controls.Add(this.Item7Price);
-            this.FruitsPanel.Controls.Add(this.Item6Price);
-            this.FruitsPanel.Location = new System.Drawing.Point(49, 261);
-            this.FruitsPanel.Name = "FruitsPanel";
-            this.FruitsPanel.Size = new System.Drawing.Size(421, 49);
-            this.FruitsPanel.TabIndex = 60;
+            this.Items2Panel.BackgroundImage = global::The_Shop.Properties.Resources.woodLong;
+            this.Items2Panel.Controls.Add(this.Item10Label);
+            this.Items2Panel.Controls.Add(this.Item9Label);
+            this.Items2Panel.Controls.Add(this.Item8Label);
+            this.Items2Panel.Controls.Add(this.Item7Label);
+            this.Items2Panel.Controls.Add(this.Item6Label);
+            this.Items2Panel.Controls.Add(this.Item10Price);
+            this.Items2Panel.Controls.Add(this.Item9Price);
+            this.Items2Panel.Controls.Add(this.Item8Price);
+            this.Items2Panel.Controls.Add(this.Item7Price);
+            this.Items2Panel.Controls.Add(this.Item6Price);
+            this.Items2Panel.Location = new System.Drawing.Point(49, 261);
+            this.Items2Panel.Name = "Items2Panel";
+            this.Items2Panel.Size = new System.Drawing.Size(421, 49);
+            this.Items2Panel.TabIndex = 60;
             // 
             // Item10Label
             // 
@@ -557,23 +563,23 @@
             this.Item6Price.TabIndex = 67;
             this.Item6Price.Text = "000";
             // 
-            // CandyiesPanel
+            // Items3Panel
             // 
-            this.CandyiesPanel.BackgroundImage = global::The_Shop.Properties.Resources.woodLong;
-            this.CandyiesPanel.Controls.Add(this.Item15Label);
-            this.CandyiesPanel.Controls.Add(this.Item14Label);
-            this.CandyiesPanel.Controls.Add(this.Item13Label);
-            this.CandyiesPanel.Controls.Add(this.Item12Label);
-            this.CandyiesPanel.Controls.Add(this.Item11Label);
-            this.CandyiesPanel.Controls.Add(this.Item15Price);
-            this.CandyiesPanel.Controls.Add(this.Item14Price);
-            this.CandyiesPanel.Controls.Add(this.Item13Price);
-            this.CandyiesPanel.Controls.Add(this.Item12Price);
-            this.CandyiesPanel.Controls.Add(this.Item11Price);
-            this.CandyiesPanel.Location = new System.Drawing.Point(47, 411);
-            this.CandyiesPanel.Name = "CandyiesPanel";
-            this.CandyiesPanel.Size = new System.Drawing.Size(421, 49);
-            this.CandyiesPanel.TabIndex = 61;
+            this.Items3Panel.BackgroundImage = global::The_Shop.Properties.Resources.woodLong;
+            this.Items3Panel.Controls.Add(this.Item15Label);
+            this.Items3Panel.Controls.Add(this.Item14Label);
+            this.Items3Panel.Controls.Add(this.Item13Label);
+            this.Items3Panel.Controls.Add(this.Item12Label);
+            this.Items3Panel.Controls.Add(this.Item11Label);
+            this.Items3Panel.Controls.Add(this.Item15Price);
+            this.Items3Panel.Controls.Add(this.Item14Price);
+            this.Items3Panel.Controls.Add(this.Item13Price);
+            this.Items3Panel.Controls.Add(this.Item12Price);
+            this.Items3Panel.Controls.Add(this.Item11Price);
+            this.Items3Panel.Location = new System.Drawing.Point(47, 411);
+            this.Items3Panel.Name = "Items3Panel";
+            this.Items3Panel.Size = new System.Drawing.Size(421, 49);
+            this.Items3Panel.TabIndex = 61;
             // 
             // Item15Label
             // 
@@ -903,66 +909,22 @@
             this.Item15Button.UseVisualStyleBackColor = false;
             this.Item15Button.Click += new System.EventHandler(this.Item15Button_Click);
             // 
-            // item1_1
+            // item1
             // 
-            this.item1_1.BackColor = System.Drawing.Color.Transparent;
-            this.item1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.item1_1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.item1_1.Location = new System.Drawing.Point(53, 32);
-            this.item1_1.Name = "item1_1";
-            this.item1_1.Size = new System.Drawing.Size(37, 55);
-            this.item1_1.TabIndex = 78;
-            this.item1_1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Drink1_MouseDown);
-            this.item1_1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Drink1_MouseMove);
-            this.item1_1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Drink1_MouseUp);
-            // 
-            // item1_2
-            // 
-            this.item1_2.BackColor = System.Drawing.Color.Transparent;
-            this.item1_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.item1_2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.item1_2.Location = new System.Drawing.Point(134, 32);
-            this.item1_2.Name = "item1_2";
-            this.item1_2.Size = new System.Drawing.Size(37, 55);
-            this.item1_2.TabIndex = 79;
-            this.item1_2.Paint += new System.Windows.Forms.PaintEventHandler(this.item1_2_Paint);
-            // 
-            // item1_4
-            // 
-            this.item1_4.BackColor = System.Drawing.Color.Transparent;
-            this.item1_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.item1_4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.item1_4.Location = new System.Drawing.Point(320, 32);
-            this.item1_4.Name = "item1_4";
-            this.item1_4.Size = new System.Drawing.Size(37, 55);
-            this.item1_4.TabIndex = 81;
-            // 
-            // item1_3
-            // 
-            this.item1_3.BackColor = System.Drawing.Color.Transparent;
-            this.item1_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.item1_3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.item1_3.Location = new System.Drawing.Point(225, 32);
-            this.item1_3.Name = "item1_3";
-            this.item1_3.Size = new System.Drawing.Size(37, 55);
-            this.item1_3.TabIndex = 80;
-            // 
-            // item1_5
-            // 
-            this.item1_5.BackColor = System.Drawing.Color.Transparent;
-            this.item1_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.item1_5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.item1_5.Location = new System.Drawing.Point(397, 33);
-            this.item1_5.Name = "item1_5";
-            this.item1_5.Size = new System.Drawing.Size(37, 55);
-            this.item1_5.TabIndex = 82;
+            this.item1.BackColor = System.Drawing.Color.Transparent;
+            this.item1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.item1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.item1.Location = new System.Drawing.Point(3, 5);
+            this.item1.Name = "item1";
+            this.item1.Size = new System.Drawing.Size(37, 55);
+            this.item1.TabIndex = 78;
             // 
             // item2_5
             // 
             this.item2_5.BackColor = System.Drawing.Color.Transparent;
             this.item2_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.item2_5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.item2_5.Location = new System.Drawing.Point(400, 207);
+            this.item2_5.Location = new System.Drawing.Point(351, 3);
             this.item2_5.Name = "item2_5";
             this.item2_5.Size = new System.Drawing.Size(37, 55);
             this.item2_5.TabIndex = 87;
@@ -972,7 +934,7 @@
             this.item2_4.BackColor = System.Drawing.Color.Transparent;
             this.item2_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.item2_4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.item2_4.Location = new System.Drawing.Point(323, 206);
+            this.item2_4.Location = new System.Drawing.Point(272, 3);
             this.item2_4.Name = "item2_4";
             this.item2_4.Size = new System.Drawing.Size(37, 55);
             this.item2_4.TabIndex = 86;
@@ -982,7 +944,7 @@
             this.item2_2.BackColor = System.Drawing.Color.Transparent;
             this.item2_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.item2_2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.item2_2.Location = new System.Drawing.Point(137, 206);
+            this.item2_2.Location = new System.Drawing.Point(88, 3);
             this.item2_2.Name = "item2_2";
             this.item2_2.Size = new System.Drawing.Size(37, 55);
             this.item2_2.TabIndex = 84;
@@ -992,7 +954,7 @@
             this.item2_3.BackColor = System.Drawing.Color.Transparent;
             this.item2_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.item2_3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.item2_3.Location = new System.Drawing.Point(228, 206);
+            this.item2_3.Location = new System.Drawing.Point(179, 3);
             this.item2_3.Name = "item2_3";
             this.item2_3.Size = new System.Drawing.Size(37, 55);
             this.item2_3.TabIndex = 85;
@@ -1002,7 +964,7 @@
             this.item2_1.BackColor = System.Drawing.Color.Transparent;
             this.item2_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.item2_1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.item2_1.Location = new System.Drawing.Point(56, 206);
+            this.item2_1.Location = new System.Drawing.Point(5, 3);
             this.item2_1.Name = "item2_1";
             this.item2_1.Size = new System.Drawing.Size(37, 55);
             this.item2_1.TabIndex = 83;
@@ -1012,7 +974,7 @@
             this.item3_5.BackColor = System.Drawing.Color.Transparent;
             this.item3_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.item3_5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.item3_5.Location = new System.Drawing.Point(398, 358);
+            this.item3_5.Location = new System.Drawing.Point(351, 3);
             this.item3_5.Name = "item3_5";
             this.item3_5.Size = new System.Drawing.Size(37, 55);
             this.item3_5.TabIndex = 92;
@@ -1022,7 +984,7 @@
             this.item3_4.BackColor = System.Drawing.Color.Transparent;
             this.item3_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.item3_4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.item3_4.Location = new System.Drawing.Point(321, 357);
+            this.item3_4.Location = new System.Drawing.Point(274, 3);
             this.item3_4.Name = "item3_4";
             this.item3_4.Size = new System.Drawing.Size(37, 55);
             this.item3_4.TabIndex = 91;
@@ -1032,7 +994,7 @@
             this.item3_2.BackColor = System.Drawing.Color.Transparent;
             this.item3_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.item3_2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.item3_2.Location = new System.Drawing.Point(135, 357);
+            this.item3_2.Location = new System.Drawing.Point(88, 3);
             this.item3_2.Name = "item3_2";
             this.item3_2.Size = new System.Drawing.Size(37, 55);
             this.item3_2.TabIndex = 89;
@@ -1042,7 +1004,7 @@
             this.item3_3.BackColor = System.Drawing.Color.Transparent;
             this.item3_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.item3_3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.item3_3.Location = new System.Drawing.Point(226, 357);
+            this.item3_3.Location = new System.Drawing.Point(181, 3);
             this.item3_3.Name = "item3_3";
             this.item3_3.Size = new System.Drawing.Size(37, 55);
             this.item3_3.TabIndex = 90;
@@ -1052,7 +1014,7 @@
             this.item3_1.BackColor = System.Drawing.Color.Transparent;
             this.item3_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.item3_1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.item3_1.Location = new System.Drawing.Point(54, 357);
+            this.item3_1.Location = new System.Drawing.Point(7, 3);
             this.item3_1.Name = "item3_1";
             this.item3_1.Size = new System.Drawing.Size(37, 55);
             this.item3_1.TabIndex = 88;
@@ -1073,6 +1035,77 @@
             this.AccountingButton.Visible = false;
             this.AccountingButton.Click += new System.EventHandler(this.AccountingButton_Click);
             // 
+            // Pictures1Panel
+            // 
+            this.Pictures1Panel.BackColor = System.Drawing.Color.Transparent;
+            this.Pictures1Panel.Controls.Add(this.item5);
+            this.Pictures1Panel.Controls.Add(this.item4);
+            this.Pictures1Panel.Controls.Add(this.item3);
+            this.Pictures1Panel.Controls.Add(this.item2);
+            this.Pictures1Panel.Controls.Add(this.item1);
+            this.Pictures1Panel.Location = new System.Drawing.Point(46, 26);
+            this.Pictures1Panel.Name = "Pictures1Panel";
+            this.Pictures1Panel.Size = new System.Drawing.Size(421, 60);
+            this.Pictures1Panel.TabIndex = 93;
+            // 
+            // item2
+            // 
+            this.item2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.item2.Location = new System.Drawing.Point(90, 5);
+            this.item2.Name = "item2";
+            this.item2.Size = new System.Drawing.Size(37, 55);
+            this.item2.TabIndex = 79;
+            // 
+            // item3
+            // 
+            this.item3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.item3.Location = new System.Drawing.Point(181, 5);
+            this.item3.Name = "item3";
+            this.item3.Size = new System.Drawing.Size(37, 55);
+            this.item3.TabIndex = 80;
+            // 
+            // item4
+            // 
+            this.item4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.item4.Location = new System.Drawing.Point(275, 5);
+            this.item4.Name = "item4";
+            this.item4.Size = new System.Drawing.Size(37, 55);
+            this.item4.TabIndex = 81;
+            // 
+            // item5
+            // 
+            this.item5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.item5.Location = new System.Drawing.Point(353, 5);
+            this.item5.Name = "item5";
+            this.item5.Size = new System.Drawing.Size(37, 55);
+            this.item5.TabIndex = 82;
+            // 
+            // Pictures2Panel
+            // 
+            this.Pictures2Panel.BackColor = System.Drawing.Color.Transparent;
+            this.Pictures2Panel.Controls.Add(this.item2_1);
+            this.Pictures2Panel.Controls.Add(this.item2_2);
+            this.Pictures2Panel.Controls.Add(this.item2_3);
+            this.Pictures2Panel.Controls.Add(this.item2_4);
+            this.Pictures2Panel.Controls.Add(this.item2_5);
+            this.Pictures2Panel.Location = new System.Drawing.Point(49, 201);
+            this.Pictures2Panel.Name = "Pictures2Panel";
+            this.Pictures2Panel.Size = new System.Drawing.Size(421, 60);
+            this.Pictures2Panel.TabIndex = 94;
+            // 
+            // Pictures3Panel
+            // 
+            this.Pictures3Panel.BackColor = System.Drawing.Color.Transparent;
+            this.Pictures3Panel.Controls.Add(this.item3_1);
+            this.Pictures3Panel.Controls.Add(this.item3_2);
+            this.Pictures3Panel.Controls.Add(this.item3_3);
+            this.Pictures3Panel.Controls.Add(this.item3_4);
+            this.Pictures3Panel.Controls.Add(this.item3_5);
+            this.Pictures3Panel.Location = new System.Drawing.Point(47, 355);
+            this.Pictures3Panel.Name = "Pictures3Panel";
+            this.Pictures3Panel.Size = new System.Drawing.Size(421, 60);
+            this.Pictures3Panel.TabIndex = 95;
+            // 
             // ShopForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1080,22 +1113,10 @@
             this.BackgroundImage = global::The_Shop.Properties.Resources.background2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(498, 604);
+            this.Controls.Add(this.Pictures3Panel);
+            this.Controls.Add(this.Pictures2Panel);
+            this.Controls.Add(this.Pictures1Panel);
             this.Controls.Add(this.AccountingButton);
-            this.Controls.Add(this.item3_5);
-            this.Controls.Add(this.item3_4);
-            this.Controls.Add(this.item3_2);
-            this.Controls.Add(this.item3_3);
-            this.Controls.Add(this.item3_1);
-            this.Controls.Add(this.item2_5);
-            this.Controls.Add(this.item1_5);
-            this.Controls.Add(this.item2_4);
-            this.Controls.Add(this.item1_4);
-            this.Controls.Add(this.item2_2);
-            this.Controls.Add(this.item1_2);
-            this.Controls.Add(this.item2_3);
-            this.Controls.Add(this.item1_3);
-            this.Controls.Add(this.item2_1);
-            this.Controls.Add(this.item1_1);
             this.Controls.Add(this.Item15Button);
             this.Controls.Add(this.Item14Button);
             this.Controls.Add(this.Item12Button);
@@ -1109,9 +1130,9 @@
             this.Controls.Add(this.Item4Button);
             this.Controls.Add(this.Item2Button);
             this.Controls.Add(this.Item1Button);
-            this.Controls.Add(this.CandyiesPanel);
-            this.Controls.Add(this.FruitsPanel);
-            this.Controls.Add(this.DrinksPanel);
+            this.Controls.Add(this.Items3Panel);
+            this.Controls.Add(this.Items2Panel);
+            this.Controls.Add(this.Items1Panel);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -1129,12 +1150,15 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.DrinksPanel.ResumeLayout(false);
-            this.DrinksPanel.PerformLayout();
-            this.FruitsPanel.ResumeLayout(false);
-            this.FruitsPanel.PerformLayout();
-            this.CandyiesPanel.ResumeLayout(false);
-            this.CandyiesPanel.PerformLayout();
+            this.Items1Panel.ResumeLayout(false);
+            this.Items1Panel.PerformLayout();
+            this.Items2Panel.ResumeLayout(false);
+            this.Items2Panel.PerformLayout();
+            this.Items3Panel.ResumeLayout(false);
+            this.Items3Panel.PerformLayout();
+            this.Pictures1Panel.ResumeLayout(false);
+            this.Pictures2Panel.ResumeLayout(false);
+            this.Pictures3Panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1151,9 +1175,9 @@
         private System.Windows.Forms.Label CandyiesLabel;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label drinksLabel;
-        private System.Windows.Forms.Panel DrinksPanel;
-        private System.Windows.Forms.Panel FruitsPanel;
-        private System.Windows.Forms.Panel CandyiesPanel;
+        private System.Windows.Forms.Panel Items1Panel;
+        private System.Windows.Forms.Panel Items2Panel;
+        private System.Windows.Forms.Panel Items3Panel;
         private System.Windows.Forms.Label Item5Price;
         private System.Windows.Forms.Label Item4Price;
         private System.Windows.Forms.Label Item3Price;
@@ -1184,11 +1208,7 @@
         private System.Windows.Forms.Button Item12Button;
         private System.Windows.Forms.Button Item14Button;
         private System.Windows.Forms.Button Item15Button;
-        private System.Windows.Forms.Panel item1_1;
-        private System.Windows.Forms.Panel item1_2;
-        private System.Windows.Forms.Panel item1_4;
-        private System.Windows.Forms.Panel item1_3;
-        private System.Windows.Forms.Panel item1_5;
+        private System.Windows.Forms.Panel item1;
         private System.Windows.Forms.Panel item2_5;
         private System.Windows.Forms.Panel item2_4;
         private System.Windows.Forms.Panel item2_2;
@@ -1216,5 +1236,12 @@
         private System.Windows.Forms.Label Item13Label;
         private System.Windows.Forms.Label Item12Label;
         private System.Windows.Forms.Label Item11Label;
+        private System.Windows.Forms.Panel Pictures1Panel;
+        private System.Windows.Forms.Panel item5;
+        private System.Windows.Forms.Panel item4;
+        private System.Windows.Forms.Panel item3;
+        private System.Windows.Forms.Panel item2;
+        private System.Windows.Forms.Panel Pictures2Panel;
+        private System.Windows.Forms.Panel Pictures3Panel;
     }
 }
