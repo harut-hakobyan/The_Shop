@@ -17,9 +17,9 @@ namespace The_Shop
             {
                 changeProducts(i, Item1Label, Item1Price, item1_1);
             }
-            Item1Label.Text = productsArray[1][1];
-            Item1Price.Text = productsArray[1][2];
-            item1_1.BackgroundImage = Image.FromFile(@"Products\" + productsArray[1][2]) ;
+            //Item1Label.Text = productsArray[1][1];
+            //Item1Price.Text = productsArray[1][2];
+            //item1_1.BackgroundImage = Image.FromFile(@"Products\" + productsArray[1][2]) ;
             //    changeProducts(1,Item1Label,Item1Price,item1_1);
             //    changeProducts(2,Item2Label,Item2Price,item1_2);
             //    changeProducts(3, Item3Label, Item3Price, item1_3);
