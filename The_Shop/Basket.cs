@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace The_Shop
 {
-    static class Basket
+    public static class Basket
     {
-        public static List<string> itemsName;
+        public static List<string> items = new List<string>();
+        public static int quantity;
         public static int price;
+        public static int amount=0;
     }
 }

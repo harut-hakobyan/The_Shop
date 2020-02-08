@@ -124,9 +124,6 @@
   <data name="Warehouse" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Warehouse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AddEditButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AddEditButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Fanta2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fanta2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -141,6 +138,9 @@
   </data>
   <data name="Fanta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fanta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Natural" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Natural.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IceCream" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IceCream.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,6 +163,9 @@
   <data name="Jermuk(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Jermuk(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="wp2406445" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wp2406445.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="AddWorkerButton1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddWorkerButton1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -172,26 +175,26 @@
   <data name="Jermuk" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Jermuk1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Candy4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Candy4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Workers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Workers.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Apple" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Apple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AddEditButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddEditButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mtgVC1W" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mtgVC1W.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Jermuk1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Products\Jermuk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="background2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Workers" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Workers.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Candy3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Candy3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AddEditButton1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddEditButton1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Candy3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Candy3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Banan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Banan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,8 +208,8 @@
   <data name="AdmPanelBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AdmPanelBackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Natural" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Natural.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Candy4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Candy4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Candy1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Candy1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,10 +226,10 @@
   <data name="singboard2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\singboard2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wp2406445" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wp2406445.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Apple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Apple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Jermuk1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Products\Jermuk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BasketBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BasketBackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

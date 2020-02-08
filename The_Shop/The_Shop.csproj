@@ -293,5 +293,8 @@
   <ItemGroup>
     <None Include="Resources\AccountingBackground.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BasketBackground.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

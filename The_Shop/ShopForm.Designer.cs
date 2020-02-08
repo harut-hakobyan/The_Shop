@@ -100,10 +100,10 @@
             this.item3_1 = new System.Windows.Forms.Panel();
             this.AccountingButton = new System.Windows.Forms.Button();
             this.Pictures1Panel = new System.Windows.Forms.Panel();
-            this.item2 = new System.Windows.Forms.Panel();
-            this.item3 = new System.Windows.Forms.Panel();
-            this.item4 = new System.Windows.Forms.Panel();
             this.item5 = new System.Windows.Forms.Panel();
+            this.item4 = new System.Windows.Forms.Panel();
+            this.item3 = new System.Windows.Forms.Panel();
+            this.item2 = new System.Windows.Forms.Panel();
             this.Pictures2Panel = new System.Windows.Forms.Panel();
             this.Pictures3Panel = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
@@ -181,11 +181,13 @@
             this.BasketPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.BasketPictureBox.BackgroundImage = global::The_Shop.Properties.Resources.shopping_cart_icon;
             this.BasketPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BasketPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BasketPictureBox.Location = new System.Drawing.Point(346, 480);
             this.BasketPictureBox.Name = "BasketPictureBox";
             this.BasketPictureBox.Size = new System.Drawing.Size(152, 126);
             this.BasketPictureBox.TabIndex = 31;
             this.BasketPictureBox.TabStop = false;
+            this.BasketPictureBox.Click += new System.EventHandler(this.BasketPictureBox_Click);
             // 
             // panel3
             // 
@@ -244,9 +246,9 @@
             this.CandyiesLabel.Font = new System.Drawing.Font("Sitka Text", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CandyiesLabel.Location = new System.Drawing.Point(30, 11);
             this.CandyiesLabel.Name = "CandyiesLabel";
-            this.CandyiesLabel.Size = new System.Drawing.Size(97, 28);
+            this.CandyiesLabel.Size = new System.Drawing.Size(85, 28);
             this.CandyiesLabel.TabIndex = 41;
-            this.CandyiesLabel.Text = "Candyies";
+            this.CandyiesLabel.Text = "Candies";
             // 
             // panel5
             // 
@@ -918,6 +920,7 @@
             this.item1.Name = "item1";
             this.item1.Size = new System.Drawing.Size(37, 55);
             this.item1.TabIndex = 78;
+            this.item1.Click += new System.EventHandler(this.item1_Click);
             // 
             // item2_5
             // 
@@ -1048,37 +1051,41 @@
             this.Pictures1Panel.Size = new System.Drawing.Size(421, 60);
             this.Pictures1Panel.TabIndex = 93;
             // 
-            // item2
+            // item5
             // 
-            this.item2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.item2.Location = new System.Drawing.Point(90, 5);
-            this.item2.Name = "item2";
-            this.item2.Size = new System.Drawing.Size(37, 55);
-            this.item2.TabIndex = 79;
-            // 
-            // item3
-            // 
-            this.item3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.item3.Location = new System.Drawing.Point(181, 5);
-            this.item3.Name = "item3";
-            this.item3.Size = new System.Drawing.Size(37, 55);
-            this.item3.TabIndex = 80;
+            this.item5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.item5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.item5.Location = new System.Drawing.Point(353, 5);
+            this.item5.Name = "item5";
+            this.item5.Size = new System.Drawing.Size(37, 55);
+            this.item5.TabIndex = 82;
             // 
             // item4
             // 
             this.item4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.item4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.item4.Location = new System.Drawing.Point(275, 5);
             this.item4.Name = "item4";
             this.item4.Size = new System.Drawing.Size(37, 55);
             this.item4.TabIndex = 81;
             // 
-            // item5
+            // item3
             // 
-            this.item5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.item5.Location = new System.Drawing.Point(353, 5);
-            this.item5.Name = "item5";
-            this.item5.Size = new System.Drawing.Size(37, 55);
-            this.item5.TabIndex = 82;
+            this.item3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.item3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.item3.Location = new System.Drawing.Point(181, 5);
+            this.item3.Name = "item3";
+            this.item3.Size = new System.Drawing.Size(37, 55);
+            this.item3.TabIndex = 80;
+            // 
+            // item2
+            // 
+            this.item2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.item2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.item2.Location = new System.Drawing.Point(90, 5);
+            this.item2.Name = "item2";
+            this.item2.Size = new System.Drawing.Size(37, 55);
+            this.item2.TabIndex = 79;
             // 
             // Pictures2Panel
             // 
@@ -1141,6 +1148,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ShopForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ShopForm";
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BasketPictureBox)).EndInit();

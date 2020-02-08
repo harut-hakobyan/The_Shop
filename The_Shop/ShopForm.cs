@@ -454,6 +454,26 @@ namespace The_Shop
             Items1Panel.Controls.GetType();
         }
 
+        private void item1_Click(object sender, EventArgs e)
+        {
+                //if (Item1Label.Text != item)
+                //{
+            Basket.items.Add(Item1Label.Text + " " + Item1Price.Text);
+            string tmp = Item1Price.Text;
+            string tmp2 = tmp.Substring(0, tmp.Length - 1);
+            Basket.amount += int.Parse(tmp2);
+                    
+                //}
+            
+            //Basket.quantity
+        }
+
+        private void BasketPictureBox_Click(object sender, EventArgs e)
+        {
+            var basketForm = new BasketForm();
+            basketForm.Show();
+        }
+
         private void panel2_MouseDown(object sender, MouseEventArgs e)
         {
             tmpX = Cursor.Position.X;
