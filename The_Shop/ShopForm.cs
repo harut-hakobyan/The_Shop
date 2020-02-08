@@ -37,6 +37,7 @@ namespace The_Shop
                 else
                     panelList[i].BackgroundImage = null;
             }
+            
             panelList.Clear();
             foreach (var item in Pictures2Panel.Controls)
             {
@@ -45,7 +46,7 @@ namespace The_Shop
             //panelList.Reverse();
             for (int i = 0; i < 5; i++)
             {
-                panelList[i].BackgroundImage = Image.FromFile(@"Products\" + changeProducts()[i+5].picture);
+                    panelList[i].BackgroundImage = Image.FromFile(@"Products\" + changeProducts()[i + 5].picture);
             }
             panelList.Clear();
             foreach (var item in Pictures3Panel.Controls)
@@ -64,10 +65,17 @@ namespace The_Shop
             }
             
             labelList.Reverse();
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 10; i++)
             {
-                labelList[i + 5].Text = changeProducts()[i].name;
-                labelList[i].Text = changeProducts()[i].price + "$";
+                if (i > 4)
+                {
+                    labelList[i+5].Text = changeProducts()[i - 5].quantity;
+                }
+                else
+                {
+                    labelList[i + 5].Text = changeProducts()[i].name;
+                    labelList[i].Text = changeProducts()[i].price + "$";
+                }
             }
             labelList.Clear();
             foreach (var item in Items2Panel.Controls)
@@ -75,10 +83,17 @@ namespace The_Shop
                 labelList.Add((Label)item);
             }
             labelList.Reverse();
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 10; i++)
             {
-                labelList[i + 5].Text = changeProducts()[i + 5].name;
-                labelList[i].Text = changeProducts()[i + 5].price + "$";
+                if (i > 4)
+                {
+                    labelList[i + 5].Text = changeProducts()[i].quantity;
+                }
+                else
+                {
+                    labelList[i + 5].Text = changeProducts()[i + 5].name;
+                    labelList[i].Text = changeProducts()[i + 5].price + "$";
+                }
             }
             labelList.Clear();
             foreach (var item in Items3Panel.Controls)
@@ -86,10 +101,17 @@ namespace The_Shop
                 labelList.Add((Label)item);
             }
             labelList.Reverse();
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 10; i++)
             {
-                labelList[i + 5].Text = changeProducts()[i + 10].name;
-                labelList[i].Text = changeProducts()[i + 10].price + "$";
+                if (i > 4)
+                {
+                    labelList[i + 5].Text = changeProducts()[i+5].quantity;
+                }
+                else
+                {
+                    labelList[i + 5].Text = changeProducts()[i + 10].name;
+                    labelList[i].Text = changeProducts()[i + 10].price + "$";
+                }
             }
             labelList.Clear();
         }
@@ -149,6 +171,7 @@ namespace The_Shop
                 Item1Price.Text = Product.price.ToString() + "$";
                 Item1Label.Text = Product.name;
                 item1.BackgroundImage = Image.FromFile(@"Products\" + Product.picture);
+                Item1Quantity.Text = Product.quantity.ToString();
             }
             else if (productForm.DialogResult == DialogResult.Abort)
             {
@@ -185,6 +208,7 @@ namespace The_Shop
                 Item2Price.Text = Product.price.ToString() + "$";
                 Item2Label.Text = Product.name;
                 item2.BackgroundImage = Image.FromFile(@"Products\" + Product.picture);
+                Item2Quantity.Text = Product.quantity.ToString();
             }
             else if (productForm.DialogResult == DialogResult.Abort)
             {
@@ -202,6 +226,7 @@ namespace The_Shop
                 Item3Price.Text = Product.price.ToString() + "$";
                 Item3Label.Text = Product.name;
                 item3.BackgroundImage = Image.FromFile(@"Products\" + Product.picture);
+                Item3Quantity.Text = Product.quantity.ToString();
             }
             else if (productForm.DialogResult == DialogResult.Abort)
             {
@@ -219,6 +244,7 @@ namespace The_Shop
                 Item4Price.Text = Product.price.ToString() + "$";
                 Item4Label.Text = Product.name;
                 item4.BackgroundImage = Image.FromFile(@"Products\" + Product.picture);
+                Item4Quantity.Text = Product.quantity.ToString();
             }
             else if (productForm.DialogResult == DialogResult.Abort)
             {
@@ -236,6 +262,7 @@ namespace The_Shop
                 Item5Price.Text = Product.price.ToString() + "$";
                 Item5Label.Text = Product.name;
                 item5.BackgroundImage = Image.FromFile(@"Products\" + Product.picture);
+                Item5Quantity.Text = Product.quantity.ToString();
             }
             else if (productForm.DialogResult == DialogResult.Abort)
             {
@@ -253,6 +280,7 @@ namespace The_Shop
                 Item6Price.Text = Product.price.ToString() + "$";
                 Item6Label.Text = Product.name;
                 item2_1.BackgroundImage = Image.FromFile(@"Products\" + Product.picture);
+                Item6Quantity.Text = Product.quantity.ToString();
             }
             else if (productForm.DialogResult == DialogResult.Abort)
             {
@@ -270,6 +298,7 @@ namespace The_Shop
                 Item7Price.Text = Product.price.ToString() + "$";
                 Item7Label.Text = Product.name;
                 item2_2.BackgroundImage = Image.FromFile(@"Products\" + Product.picture);
+                Item7Quantity.Text = Product.quantity.ToString();
             }
             else if (productForm.DialogResult == DialogResult.Abort)
             {
@@ -287,6 +316,7 @@ namespace The_Shop
                 Item8Price.Text = Product.price.ToString() + "$";
                 Item8Label.Text = Product.name;
                 item2_3.BackgroundImage = Image.FromFile(@"Products\" + Product.picture);
+                Item8Quantity.Text = Product.quantity.ToString();
             }
             else if (productForm.DialogResult == DialogResult.Abort)
             {
@@ -304,6 +334,7 @@ namespace The_Shop
                 Item9Price.Text = Product.price.ToString() + "$";
                 Item9Label.Text = Product.name;
                 item2_4.BackgroundImage = Image.FromFile(@"Products\" + Product.picture);
+                Item9Quantity.Text = Product.quantity.ToString();
             }
             else if (productForm.DialogResult == DialogResult.Abort)
             {
@@ -321,6 +352,7 @@ namespace The_Shop
                 Item10Price.Text = Product.price.ToString() + "$";
                 Item10Label.Text = Product.name;
                 item2_5.BackgroundImage = Image.FromFile(@"Products\" + Product.picture);
+                Item10Quantity.Text = Product.quantity.ToString();
             }
             else if (productForm.DialogResult == DialogResult.Abort)
             {
@@ -338,6 +370,7 @@ namespace The_Shop
                 Item11Price.Text = Product.price.ToString() + "$";
                 Item11Label.Text = Product.name;
                 item3_1.BackgroundImage = Image.FromFile(@"Products\" + Product.picture);
+                Item11Quantity.Text = Product.quantity.ToString();
             }
             else if (productForm.DialogResult == DialogResult.Abort)
             {
@@ -355,6 +388,7 @@ namespace The_Shop
                 Item12Price.Text = Product.price.ToString() + "$";
                 Item12Label.Text = Product.name;
                 item3_2.BackgroundImage = Image.FromFile(@"Products\" + Product.picture);
+                Item12Quantity.Text = Product.quantity.ToString();
             }
             else if (productForm.DialogResult == DialogResult.Abort)
             {
@@ -372,6 +406,7 @@ namespace The_Shop
                 Item13Price.Text = Product.price.ToString() + "$";
                 Item13Label.Text = Product.name;
                 item3_3.BackgroundImage = Image.FromFile(@"Products\" + Product.picture);
+                Item13Quantity.Text = Product.quantity.ToString();
             }
             else if (productForm.DialogResult == DialogResult.Abort)
             {
@@ -389,6 +424,7 @@ namespace The_Shop
                 Item14Price.Text = Product.price.ToString() + "$";
                 Item14Label.Text = Product.name;
                 item3_4.BackgroundImage = Image.FromFile(@"Products\" + Product.picture);
+                Item14Quantity.Text = Product.quantity.ToString();
             }
             else if (productForm.DialogResult == DialogResult.Abort)
             {
@@ -406,6 +442,7 @@ namespace The_Shop
                 Item15Price.Text = Product.price.ToString() + "$";
                 Item15Label.Text = Product.name;
                 item3_5.BackgroundImage = Image.FromFile(@"Products\" + Product.picture);
+                Item15Quantity.Text = Product.quantity.ToString();
             }
             else if (productForm.DialogResult == DialogResult.Abort)
             {
@@ -425,6 +462,7 @@ namespace The_Shop
             {
 
             }
+            
             MySqlCommand mysql_query = DbConnector.conn.CreateCommand();
             mysql_query.CommandText = $"SELECT ID,Name,Price,Quantity,Picture FROM Products";
             MySqlDataReader mysql_result;
@@ -456,22 +494,55 @@ namespace The_Shop
 
         private void item1_Click(object sender, EventArgs e)
         {
-                //if (Item1Label.Text != item)
-                //{
-            Basket.items.Add(Item1Label.Text + " " + Item1Price.Text);
-            string tmp = Item1Price.Text;
-            string tmp2 = tmp.Substring(0, tmp.Length - 1);
-            Basket.amount += int.Parse(tmp2);
-                    
-                //}
-            
-            //Basket.quantity
+            selectProduct(Item1Label, Item1Price);
         }
 
         private void BasketPictureBox_Click(object sender, EventArgs e)
         {
             var basketForm = new BasketForm();
             basketForm.Show();
+        }
+
+        private void item2_Click(object sender, EventArgs e)
+        {
+            selectProduct(Item2Label,Item2Price);
+        }
+        private void selectProduct(Label label, Label price)
+        {
+            Basket.items.Add(label.Text + " " + price.Text);
+            string tmp = price.Text;
+            string tmp2 = tmp.Substring(0, tmp.Length - 1);
+            Basket.amount += int.Parse(tmp2);
+        }
+
+        private void item3_Click(object sender, EventArgs e)
+        {
+            selectProduct(Item3Label, Item3Price);
+        }
+
+        private void item4_Click(object sender, EventArgs e)
+        {
+            selectProduct(Item4Label, Item4Price);
+        }
+
+        private void item5_Click(object sender, EventArgs e)
+        {
+            selectProduct(Item5Label, Item5Price);
+        }
+
+        private void item2_1_Click(object sender, EventArgs e)
+        {
+            selectProduct(Item6Label, Item6Price);
+        }
+
+        private void item2_2_Click(object sender, EventArgs e)
+        {
+            selectProduct(Item7Label, Item7Price);
+        }
+
+        private void item2_3_Click(object sender, EventArgs e)
+        {
+            selectProduct(Item8Label, Item8Price);
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)

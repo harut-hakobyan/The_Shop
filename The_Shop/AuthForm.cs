@@ -54,19 +54,12 @@ namespace The_Shop
                             else
                             {
                                 MessageBox.Show("Wrong Password!");
-                                //Helper.wrong = true;
                                 break;
                             }
                             break;
                         }
                     }
                     MessageBox.Show("Account not found...");
-                    //if (!Helper.wrong)
-                    //{
-                    //    if (!Account.signed)
-                    //        MessageBox.Show("Account not found...");
-                    //}
-                    //Helper.wrong = false;
                     mysql_result.Close();
                 }
                 else
