@@ -73,6 +73,16 @@ namespace The_Shop
                 MySqlDataReader mysql_result2;
                 mysql_result2 = mysql_query2.ExecuteReader();
                 mysql_result2.Close();
+                MySqlCommand mysql_query3 = DbConnector.conn.CreateCommand();
+                for (int i = 1; i < 16; i++)
+                {
+                    mysql_query3.CommandText = $"UPDATE Products SET Quantity = '{Product.quantityDict[i]}' WHERE ID = '{i}'";
+                    MySqlDataReader mysql_result3;
+                    mysql_result3 = mysql_query3.ExecuteReader();
+                    mysql_result3.Close();
+                }
+
+
                 Basket.amount = 0;
                 amountLabel.Text = "0";
                 Account.profit = globalAmount;

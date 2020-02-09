@@ -162,6 +162,7 @@
             this.AdmPanelButton.TabIndex = 2;
             this.AdmPanelButton.Text = "AdminPanel";
             this.AdmPanelButton.UseVisualStyleBackColor = true;
+            this.AdmPanelButton.Visible = false;
             this.AdmPanelButton.Click += new System.EventHandler(this.AdmPanelButton_Click);
             // 
             // button4
@@ -253,6 +254,7 @@
             this.Item13Button.TabIndex = 75;
             this.Item13Button.Text = "Edit";
             this.Item13Button.UseVisualStyleBackColor = false;
+            this.Item13Button.Visible = false;
             this.Item13Button.Click += new System.EventHandler(this.Item13Button_Click);
             // 
             // CandyiesLabel
@@ -292,6 +294,7 @@
             this.Item3Button.TabIndex = 65;
             this.Item3Button.Text = "Edit";
             this.Item3Button.UseVisualStyleBackColor = false;
+            this.Item3Button.Visible = false;
             this.Item3Button.Click += new System.EventHandler(this.Item3Button_Click);
             // 
             // drinksLabel
@@ -339,6 +342,7 @@
             this.Item5Quantity.Size = new System.Drawing.Size(32, 16);
             this.Item5Quantity.TabIndex = 87;
             this.Item5Quantity.Text = "000";
+            this.Item5Quantity.Visible = false;
             // 
             // Item4Quantity
             // 
@@ -351,6 +355,7 @@
             this.Item4Quantity.Size = new System.Drawing.Size(32, 16);
             this.Item4Quantity.TabIndex = 86;
             this.Item4Quantity.Text = "000";
+            this.Item4Quantity.Visible = false;
             // 
             // Item3Quantity
             // 
@@ -363,6 +368,7 @@
             this.Item3Quantity.Size = new System.Drawing.Size(32, 16);
             this.Item3Quantity.TabIndex = 85;
             this.Item3Quantity.Text = "000";
+            this.Item3Quantity.Visible = false;
             // 
             // Item2Quantity
             // 
@@ -375,6 +381,7 @@
             this.Item2Quantity.Size = new System.Drawing.Size(32, 16);
             this.Item2Quantity.TabIndex = 84;
             this.Item2Quantity.Text = "000";
+            this.Item2Quantity.Visible = false;
             // 
             // Item1Quantity
             // 
@@ -387,6 +394,7 @@
             this.Item1Quantity.Size = new System.Drawing.Size(32, 16);
             this.Item1Quantity.TabIndex = 83;
             this.Item1Quantity.Text = "000";
+            this.Item1Quantity.Visible = false;
             // 
             // Item5Label
             // 
@@ -542,6 +550,7 @@
             this.Item10Quantity.Size = new System.Drawing.Size(32, 16);
             this.Item10Quantity.TabIndex = 92;
             this.Item10Quantity.Text = "000";
+            this.Item10Quantity.Visible = false;
             // 
             // Item9Quantity
             // 
@@ -554,6 +563,7 @@
             this.Item9Quantity.Size = new System.Drawing.Size(32, 16);
             this.Item9Quantity.TabIndex = 91;
             this.Item9Quantity.Text = "000";
+            this.Item9Quantity.Visible = false;
             // 
             // Item8Quantity
             // 
@@ -566,6 +576,7 @@
             this.Item8Quantity.Size = new System.Drawing.Size(32, 16);
             this.Item8Quantity.TabIndex = 90;
             this.Item8Quantity.Text = "000";
+            this.Item8Quantity.Visible = false;
             // 
             // Item7Quantity
             // 
@@ -578,6 +589,7 @@
             this.Item7Quantity.Size = new System.Drawing.Size(32, 16);
             this.Item7Quantity.TabIndex = 89;
             this.Item7Quantity.Text = "000";
+            this.Item7Quantity.Visible = false;
             // 
             // Item6Quantity
             // 
@@ -590,6 +602,7 @@
             this.Item6Quantity.Size = new System.Drawing.Size(32, 16);
             this.Item6Quantity.TabIndex = 88;
             this.Item6Quantity.Text = "000";
+            this.Item6Quantity.Visible = false;
             // 
             // Item10Label
             // 
@@ -745,6 +758,7 @@
             this.Item15Quantity.Size = new System.Drawing.Size(32, 16);
             this.Item15Quantity.TabIndex = 93;
             this.Item15Quantity.Text = "000";
+            this.Item15Quantity.Visible = false;
             // 
             // Item14Quantity
             // 
@@ -757,6 +771,7 @@
             this.Item14Quantity.Size = new System.Drawing.Size(32, 16);
             this.Item14Quantity.TabIndex = 92;
             this.Item14Quantity.Text = "000";
+            this.Item14Quantity.Visible = false;
             // 
             // Item13Quantity
             // 
@@ -769,6 +784,7 @@
             this.Item13Quantity.Size = new System.Drawing.Size(32, 16);
             this.Item13Quantity.TabIndex = 91;
             this.Item13Quantity.Text = "000";
+            this.Item13Quantity.Visible = false;
             // 
             // Item12Quantity
             // 
@@ -781,6 +797,7 @@
             this.Item12Quantity.Size = new System.Drawing.Size(32, 16);
             this.Item12Quantity.TabIndex = 90;
             this.Item12Quantity.Text = "000";
+            this.Item12Quantity.Visible = false;
             // 
             // Item11Quantity
             // 
@@ -793,6 +810,7 @@
             this.Item11Quantity.Size = new System.Drawing.Size(32, 16);
             this.Item11Quantity.TabIndex = 89;
             this.Item11Quantity.Text = "000";
+            this.Item11Quantity.Visible = false;
             // 
             // Item15Label
             // 
@@ -928,6 +946,7 @@
             this.Item1Button.TabIndex = 63;
             this.Item1Button.Text = "Edit";
             this.Item1Button.UseVisualStyleBackColor = false;
+            this.Item1Button.Visible = false;
             this.Item1Button.Click += new System.EventHandler(this.Item1Button_Click);
             // 
             // Item2Button
@@ -944,6 +963,7 @@
             this.Item2Button.TabIndex = 64;
             this.Item2Button.Text = "Edit";
             this.Item2Button.UseVisualStyleBackColor = false;
+            this.Item2Button.Visible = false;
             this.Item2Button.Click += new System.EventHandler(this.Item2Button_Click);
             // 
             // Item4Button
@@ -960,6 +980,7 @@
             this.Item4Button.TabIndex = 66;
             this.Item4Button.Text = "Edit";
             this.Item4Button.UseVisualStyleBackColor = false;
+            this.Item4Button.Visible = false;
             this.Item4Button.Click += new System.EventHandler(this.Item4Button_Click);
             // 
             // Item5Button
@@ -976,6 +997,7 @@
             this.Item5Button.TabIndex = 67;
             this.Item5Button.Text = "Edit";
             this.Item5Button.UseVisualStyleBackColor = false;
+            this.Item5Button.Visible = false;
             this.Item5Button.Click += new System.EventHandler(this.Item5Button_Click);
             // 
             // Item7Button
@@ -992,6 +1014,7 @@
             this.Item7Button.TabIndex = 69;
             this.Item7Button.Text = "Edit";
             this.Item7Button.UseVisualStyleBackColor = false;
+            this.Item7Button.Visible = false;
             this.Item7Button.Click += new System.EventHandler(this.Item7Button_Click);
             // 
             // Item6Button
@@ -1008,6 +1031,7 @@
             this.Item6Button.TabIndex = 68;
             this.Item6Button.Text = "Edit";
             this.Item6Button.UseVisualStyleBackColor = false;
+            this.Item6Button.Visible = false;
             this.Item6Button.Click += new System.EventHandler(this.Item6Button_Click);
             // 
             // Item11Button
@@ -1024,6 +1048,7 @@
             this.Item11Button.TabIndex = 70;
             this.Item11Button.Text = "Edit";
             this.Item11Button.UseVisualStyleBackColor = false;
+            this.Item11Button.Visible = false;
             this.Item11Button.Click += new System.EventHandler(this.Item11Button_Click);
             // 
             // Item10Button
@@ -1040,6 +1065,7 @@
             this.Item10Button.TabIndex = 72;
             this.Item10Button.Text = "Edit";
             this.Item10Button.UseVisualStyleBackColor = false;
+            this.Item10Button.Visible = false;
             this.Item10Button.Click += new System.EventHandler(this.Item10Button_Click);
             // 
             // Item9Button
@@ -1056,6 +1082,7 @@
             this.Item9Button.TabIndex = 71;
             this.Item9Button.Text = "Edit";
             this.Item9Button.UseVisualStyleBackColor = false;
+            this.Item9Button.Visible = false;
             this.Item9Button.Click += new System.EventHandler(this.Item9Button_Click);
             // 
             // Item8Button
@@ -1072,6 +1099,7 @@
             this.Item8Button.TabIndex = 73;
             this.Item8Button.Text = "Edit";
             this.Item8Button.UseVisualStyleBackColor = false;
+            this.Item8Button.Visible = false;
             this.Item8Button.Click += new System.EventHandler(this.Item8Button_Click);
             // 
             // Item12Button
@@ -1088,6 +1116,7 @@
             this.Item12Button.TabIndex = 74;
             this.Item12Button.Text = "Edit";
             this.Item12Button.UseVisualStyleBackColor = false;
+            this.Item12Button.Visible = false;
             this.Item12Button.Click += new System.EventHandler(this.Item12Button_Click);
             // 
             // Item14Button
@@ -1104,6 +1133,7 @@
             this.Item14Button.TabIndex = 76;
             this.Item14Button.Text = "Edit";
             this.Item14Button.UseVisualStyleBackColor = false;
+            this.Item14Button.Visible = false;
             this.Item14Button.Click += new System.EventHandler(this.Item14Button_Click);
             // 
             // Item15Button
@@ -1120,6 +1150,7 @@
             this.Item15Button.TabIndex = 77;
             this.Item15Button.Text = "Edit";
             this.Item15Button.UseVisualStyleBackColor = false;
+            this.Item15Button.Visible = false;
             this.Item15Button.Click += new System.EventHandler(this.Item15Button_Click);
             // 
             // item1
@@ -1256,6 +1287,7 @@
             this.AccountingButton.TabIndex = 3;
             this.AccountingButton.Text = "Accounting";
             this.AccountingButton.UseVisualStyleBackColor = false;
+            this.AccountingButton.Visible = false;
             this.AccountingButton.Click += new System.EventHandler(this.AccountingButton_Click);
             // 
             // Pictures1Panel

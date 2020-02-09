@@ -14,10 +14,62 @@ namespace The_Shop
             //try
             //{
             shopProductRefresh();
-            
-            if (Account.level == "Admin")
+
+            checkLevel();
+        }
+        private void checkLevel()
+        {
+            List<Button> buttonList = new List<Button>();
+            buttonList.Add(Item1Button);
+            buttonList.Add(Item2Button);
+            buttonList.Add(Item3Button);
+            buttonList.Add(Item4Button);
+            buttonList.Add(Item5Button);
+            buttonList.Add(Item6Button);
+            buttonList.Add(Item7Button);
+            buttonList.Add(Item8Button);
+            buttonList.Add(Item9Button);
+            buttonList.Add(Item10Button);
+            buttonList.Add(Item11Button);
+            buttonList.Add(Item12Button);
+            buttonList.Add(Item13Button);
+            buttonList.Add(Item14Button);
+            buttonList.Add(Item15Button);
+            List<Label> labelList = new List<Label>();
+            labelList.Add(Item1Quantity);
+            labelList.Add(Item2Quantity);
+            labelList.Add(Item3Quantity);
+            labelList.Add(Item4Quantity);
+            labelList.Add(Item5Quantity);
+            labelList.Add(Item6Quantity);
+            labelList.Add(Item7Quantity);
+            labelList.Add(Item8Quantity);
+            labelList.Add(Item9Quantity);
+            labelList.Add(Item10Quantity);
+            labelList.Add(Item11Quantity);
+            labelList.Add(Item12Quantity);
+            labelList.Add(Item13Quantity);
+            labelList.Add(Item14Quantity);
+            labelList.Add(Item15Quantity);
+            if (Account.level == "Admin" || Account.level == "Worker")
             {
-                AdmPanelButton.Visible = true;
+                foreach (var item in buttonList)
+                {
+                    item.Visible = true;
+                }
+                foreach (var item in labelList)
+                {
+                    item.Visible = true;
+                }
+                if (Account.level == "Admin")
+                {
+                    AdmPanelButton.Visible = true;
+                    AccountingButton.Visible = true;
+                }
+                if (Account.level == "Worker")
+                {
+                    Account.buy = false;
+                }
             }
         }
         private void shopProductRefresh()
@@ -65,11 +117,14 @@ namespace The_Shop
             }
             
             labelList.Reverse();
+            int counter1 = 1;
             for (int i = 0; i < 10; i++)
             {
                 if (i > 4)
                 {
                     labelList[i+5].Text = changeProducts()[i - 5].quantity;
+                    Product.quantityDict.Add(counter1, int.Parse(changeProducts()[i - 5].quantity));
+                    counter1++;
                 }
                 else
                 {
@@ -88,6 +143,8 @@ namespace The_Shop
                 if (i > 4)
                 {
                     labelList[i + 5].Text = changeProducts()[i].quantity;
+                    Product.quantityDict.Add(counter1, int.Parse(changeProducts()[i - 5].quantity));
+                    counter1++;
                 }
                 else
                 {
@@ -106,6 +163,8 @@ namespace The_Shop
                 if (i > 4)
                 {
                     labelList[i + 5].Text = changeProducts()[i+5].quantity;
+                    Product.quantityDict.Add(counter1, int.Parse(changeProducts()[i - 5].quantity));
+                    counter1++;
                 }
                 else
                 {
@@ -506,7 +565,7 @@ namespace The_Shop
 
         private void item1_Click(object sender, EventArgs e)
         {
-            selectProduct(Item1Label, Item1Price,Item1Quantity);
+            selectProduct(Item1Label, Item1Price,Item1Quantity,1);
         }
 
         private void BasketPictureBox_Click(object sender, EventArgs e)
@@ -521,91 +580,96 @@ namespace The_Shop
 
         private void item2_Click(object sender, EventArgs e)
         {
-            selectProduct(Item2Label,Item2Price,Item2Quantity);
+            selectProduct(Item2Label,Item2Price,Item2Quantity,2);
         }
-        private void selectProduct(Label label, Label price,Label quantity)
+        private void selectProduct(Label label, Label price,Label quantity,int key)
         {
-            int tmp3 = int.Parse(quantity.Text);
-            if (tmp3 != 0)
+            if (Account.buy == true)
             {
-                Basket.count++;
-                basketCountLabel.Text = Basket.count.ToString();
-                Basket.items.Add(label.Text + " " + price.Text);
-                string tmp = price.Text;
-                string tmp2 = tmp.Substring(0, tmp.Length - 1);
-                Basket.amount += int.Parse(tmp2);
+                int tmp3 = int.Parse(quantity.Text);
+                if (tmp3 != 0)
+                {
+                    Basket.count++;
+                    basketCountLabel.Text = Basket.count.ToString();
+                    Basket.items.Add(label.Text + " " + price.Text);
+                    string tmp = price.Text;
+                    string tmp2 = tmp.Substring(0, tmp.Length - 1);
+                    Basket.amount += int.Parse(tmp2);
 
-                tmp3--;
-                quantity.Text = tmp3.ToString();
+                    tmp3--;
+                    quantity.Text = tmp3.ToString();
+                    Product.quantityDict[key] = tmp3;
+                }
+                else
+                    MessageBox.Show("No available product");
             }
             else
-                MessageBox.Show("No available product");
-            
+                MessageBox.Show("You don't buy product becouse you are a worker");
         }
 
         private void item3_Click(object sender, EventArgs e)
         {
-            selectProduct(Item3Label, Item3Price, Item3Quantity);
+            selectProduct(Item3Label, Item3Price, Item3Quantity,3);
         }
 
         private void item4_Click(object sender, EventArgs e)
         {
-            selectProduct(Item4Label, Item4Price, Item4Quantity);
+            selectProduct(Item4Label, Item4Price, Item4Quantity,4);
         }
 
         private void item5_Click(object sender, EventArgs e)
         {
-            selectProduct(Item5Label, Item5Price, Item5Quantity);
+            selectProduct(Item5Label, Item5Price, Item5Quantity,5);
         }
 
         private void item2_1_Click(object sender, EventArgs e)
         {
-            selectProduct(Item6Label, Item6Price, Item6Quantity);
+            selectProduct(Item6Label, Item6Price, Item6Quantity,6);
         }
 
         private void item2_2_Click(object sender, EventArgs e)
         {
-            selectProduct(Item7Label, Item7Price, Item7Quantity);
+            selectProduct(Item7Label, Item7Price, Item7Quantity,7);
         }
 
         private void item2_3_Click(object sender, EventArgs e)
         {
-            selectProduct(Item8Label, Item8Price, Item8Quantity);
+            selectProduct(Item8Label, Item8Price, Item8Quantity,8);
         }
 
         private void item2_4_Click(object sender, EventArgs e)
         {
-            selectProduct(Item9Label, Item9Price, Item9Quantity);
+            selectProduct(Item9Label, Item9Price, Item9Quantity,9);
         }
 
         private void item2_5_Click(object sender, EventArgs e)
         {
-            selectProduct(Item10Label, Item10Price, Item10Quantity);
+            selectProduct(Item10Label, Item10Price, Item10Quantity,10);
         }
 
         private void item3_1_Click(object sender, EventArgs e)
         {
-            selectProduct(Item11Label, Item11Price, Item11Quantity);
+            selectProduct(Item11Label, Item11Price, Item11Quantity,11);
         }
 
         private void item3_2_Click(object sender, EventArgs e)
         {
-            selectProduct(Item12Label, Item12Price, Item12Quantity);
+            selectProduct(Item12Label, Item12Price, Item12Quantity,12);
         }
 
         private void item3_3_Click(object sender, EventArgs e)
         {
-            selectProduct(Item13Label, Item13Price, Item13Quantity);
+            selectProduct(Item13Label, Item13Price, Item13Quantity,13);
         }
 
         private void item3_4_Click(object sender, EventArgs e)
         {
-            selectProduct(Item14Label, Item14Price, Item14Quantity);
+            selectProduct(Item14Label, Item14Price, Item14Quantity,14);
         }
 
         private void item3_5_Click(object sender, EventArgs e)
         {
-            selectProduct(Item15Label, Item15Price, Item15Quantity);
+            selectProduct(Item15Label, Item15Price, Item15Quantity,15);
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)

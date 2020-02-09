@@ -12,5 +12,6 @@ namespace The_Shop
         public static int quantity;
         public static double price;
         public static string picture;
+        public static Dictionary<int, int> quantityDict = new Dictionary<int, int>();
     }
 }
