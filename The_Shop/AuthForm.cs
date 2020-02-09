@@ -28,7 +28,7 @@ namespace The_Shop
                 if (passwordBox.Text != "")
                 {
                     MySqlCommand mysql_query = DbConnector.conn.CreateCommand();
-                    mysql_query.CommandText = $"SELECT Name,Surname,Email,Password,Level,Money FROM Persons";
+                    mysql_query.CommandText = $"SELECT Name,Surname,Email,Password,Level,Money,ID FROM Persons";
                     MySqlDataReader mysql_result;
                     mysql_result = mysql_query.ExecuteReader();
                     while (mysql_result.Read())
@@ -41,12 +41,10 @@ namespace The_Shop
                                 Account.surname = mysql_result.GetString(1).ToString();
                                 Account.email = mysql_result.GetString(2).ToString();
                                 Account.level = mysql_result.GetString(4).ToString();
-                                Account.money = mysql_result.GetString(5).ToString();
-
-                                //if (mysql_result.GetString(3).ToString() == "Admin")
-                                //    Account.admin = true;
+                                Account.money = int.Parse(mysql_result.GetString(5).ToString());
+                                Account.id = int.Parse(mysql_result.GetString(6).ToString());
                                 MessageBox.Show($"Account {Account.name} has been signed...");
-                                //Account.signed = true;
+                                mysql_result.Close();
                                 var ShForm = new ShopForm();
                                 ShForm.Show();
                                 this.Close();

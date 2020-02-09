@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,6 +15,7 @@ namespace The_Shop
         }
         private void RefreshList()
         {
+            moneyLabel.Text = Account.money.ToString() + "$";
             basketListBox.Items.Clear();
             amountLabel.Text = Basket.amount.ToString() + "$";
             int count = 0;
@@ -38,14 +34,36 @@ namespace The_Shop
                 int tmpInt = int.Parse(tmp2);
                 Basket.amount -= tmpInt;
                 Basket.items.RemoveAt(basketListBox.SelectedIndex);
+                Basket.count--;
                 RefreshList();
             }
             else
                 MessageBox.Show("Select item to delete");
         }
-
+        private void buyButton_Click(object sender, EventArgs e)
+        {
+            if (basketListBox.Items.Count != 0)
+            {
+                
+                basketListBox.Items.Clear();
+                Account.money -= Basket.amount;
+                moneyLabel.Text = Account.money.ToString() + "$";
+                Basket.items.Clear();
+                MySqlCommand mysql_query = DbConnector.conn.CreateCommand();
+                mysql_query.CommandText = $"UPDATE Persons SET Money = '{Account.money}' WHERE ID = '{Account.id}'";
+                MySqlDataReader mysql_result;
+                mysql_result = mysql_query.ExecuteReader();
+                mysql_result.Close();
+                Basket.count = 0;
+                MessageBox.Show("Product's buyed");
+            }
+            else
+                MessageBox.Show("Basket is empty");
+            
+        }
         private void button3_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.Abort;
             this.Close();
         }
 
@@ -73,6 +91,8 @@ namespace The_Shop
                 tmpY = Cursor.Position.Y;
             }
         }
+
+        
 
         private void panel2_MouseUp(object sender, MouseEventArgs e)
         {

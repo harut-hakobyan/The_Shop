@@ -8,10 +8,11 @@ namespace The_Shop
 {
     static class Account
     {
+        public static int id;
         public static string name;
         public static string surname;
         public static string email;
         public static string level;
-        public static string money;
+        public static int money;
     }
 }

@@ -500,7 +500,11 @@ namespace The_Shop
         private void BasketPictureBox_Click(object sender, EventArgs e)
         {
             var basketForm = new BasketForm();
-            basketForm.Show();
+            basketForm.ShowDialog();
+            if (basketForm.DialogResult == DialogResult.Abort)
+            {
+                basketCountLabel.Text = Basket.count.ToString();
+            }
         }
 
         private void item2_Click(object sender, EventArgs e)
@@ -509,6 +513,8 @@ namespace The_Shop
         }
         private void selectProduct(Label label, Label price)
         {
+            Basket.count++;
+            basketCountLabel.Text = Basket.count.ToString();
             Basket.items.Add(label.Text + " " + price.Text);
             string tmp = price.Text;
             string tmp2 = tmp.Substring(0, tmp.Length - 1);
@@ -543,6 +549,41 @@ namespace The_Shop
         private void item2_3_Click(object sender, EventArgs e)
         {
             selectProduct(Item8Label, Item8Price);
+        }
+
+        private void item2_4_Click(object sender, EventArgs e)
+        {
+            selectProduct(Item9Label, Item9Price);
+        }
+
+        private void item2_5_Click(object sender, EventArgs e)
+        {
+            selectProduct(Item10Label, Item10Price);
+        }
+
+        private void item3_1_Click(object sender, EventArgs e)
+        {
+            selectProduct(Item11Label, Item11Price);
+        }
+
+        private void item3_2_Click(object sender, EventArgs e)
+        {
+            selectProduct(Item12Label, Item12Price);
+        }
+
+        private void item3_3_Click(object sender, EventArgs e)
+        {
+            selectProduct(Item13Label, Item13Price);
+        }
+
+        private void item3_4_Click(object sender, EventArgs e)
+        {
+            selectProduct(Item14Label, Item14Price);
+        }
+
+        private void item3_5_Click(object sender, EventArgs e)
+        {
+            selectProduct(Item15Label, Item15Price);
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)

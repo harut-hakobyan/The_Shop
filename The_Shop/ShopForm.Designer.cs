@@ -42,6 +42,11 @@
             this.Item3Button = new System.Windows.Forms.Button();
             this.drinksLabel = new System.Windows.Forms.Label();
             this.Items1Panel = new System.Windows.Forms.Panel();
+            this.Item5Quantity = new System.Windows.Forms.Label();
+            this.Item4Quantity = new System.Windows.Forms.Label();
+            this.Item3Quantity = new System.Windows.Forms.Label();
+            this.Item2Quantity = new System.Windows.Forms.Label();
+            this.Item1Quantity = new System.Windows.Forms.Label();
             this.Item5Label = new System.Windows.Forms.Label();
             this.Item4Label = new System.Windows.Forms.Label();
             this.Item3Label = new System.Windows.Forms.Label();
@@ -53,6 +58,11 @@
             this.Item2Price = new System.Windows.Forms.Label();
             this.Item1Price = new System.Windows.Forms.Label();
             this.Items2Panel = new System.Windows.Forms.Panel();
+            this.Item10Quantity = new System.Windows.Forms.Label();
+            this.Item9Quantity = new System.Windows.Forms.Label();
+            this.Item8Quantity = new System.Windows.Forms.Label();
+            this.Item7Quantity = new System.Windows.Forms.Label();
+            this.Item6Quantity = new System.Windows.Forms.Label();
             this.Item10Label = new System.Windows.Forms.Label();
             this.Item9Label = new System.Windows.Forms.Label();
             this.Item8Label = new System.Windows.Forms.Label();
@@ -64,6 +74,11 @@
             this.Item7Price = new System.Windows.Forms.Label();
             this.Item6Price = new System.Windows.Forms.Label();
             this.Items3Panel = new System.Windows.Forms.Panel();
+            this.Item15Quantity = new System.Windows.Forms.Label();
+            this.Item14Quantity = new System.Windows.Forms.Label();
+            this.Item13Quantity = new System.Windows.Forms.Label();
+            this.Item12Quantity = new System.Windows.Forms.Label();
+            this.Item11Quantity = new System.Windows.Forms.Label();
             this.Item15Label = new System.Windows.Forms.Label();
             this.Item14Label = new System.Windows.Forms.Label();
             this.Item13Label = new System.Windows.Forms.Label();
@@ -106,21 +121,7 @@
             this.item2 = new System.Windows.Forms.Panel();
             this.Pictures2Panel = new System.Windows.Forms.Panel();
             this.Pictures3Panel = new System.Windows.Forms.Panel();
-            this.Item1Quantity = new System.Windows.Forms.Label();
-            this.Item2Quantity = new System.Windows.Forms.Label();
-            this.Item3Quantity = new System.Windows.Forms.Label();
-            this.Item4Quantity = new System.Windows.Forms.Label();
-            this.Item5Quantity = new System.Windows.Forms.Label();
-            this.Item6Quantity = new System.Windows.Forms.Label();
-            this.Item7Quantity = new System.Windows.Forms.Label();
-            this.Item8Quantity = new System.Windows.Forms.Label();
-            this.Item9Quantity = new System.Windows.Forms.Label();
-            this.Item10Quantity = new System.Windows.Forms.Label();
-            this.Item11Quantity = new System.Windows.Forms.Label();
-            this.Item12Quantity = new System.Windows.Forms.Label();
-            this.Item13Quantity = new System.Windows.Forms.Label();
-            this.Item14Quantity = new System.Windows.Forms.Label();
-            this.Item15Quantity = new System.Windows.Forms.Label();
+            this.basketCountLabel = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BasketPictureBox)).BeginInit();
             this.panel3.SuspendLayout();
@@ -327,6 +328,66 @@
             this.Items1Panel.Size = new System.Drawing.Size(421, 49);
             this.Items1Panel.TabIndex = 59;
             // 
+            // Item5Quantity
+            // 
+            this.Item5Quantity.AutoSize = true;
+            this.Item5Quantity.BackColor = System.Drawing.Color.Transparent;
+            this.Item5Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Item5Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Item5Quantity.Location = new System.Drawing.Point(392, 33);
+            this.Item5Quantity.Name = "Item5Quantity";
+            this.Item5Quantity.Size = new System.Drawing.Size(32, 16);
+            this.Item5Quantity.TabIndex = 87;
+            this.Item5Quantity.Text = "000";
+            // 
+            // Item4Quantity
+            // 
+            this.Item4Quantity.AutoSize = true;
+            this.Item4Quantity.BackColor = System.Drawing.Color.Transparent;
+            this.Item4Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Item4Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Item4Quantity.Location = new System.Drawing.Point(315, 31);
+            this.Item4Quantity.Name = "Item4Quantity";
+            this.Item4Quantity.Size = new System.Drawing.Size(32, 16);
+            this.Item4Quantity.TabIndex = 86;
+            this.Item4Quantity.Text = "000";
+            // 
+            // Item3Quantity
+            // 
+            this.Item3Quantity.AutoSize = true;
+            this.Item3Quantity.BackColor = System.Drawing.Color.Transparent;
+            this.Item3Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Item3Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Item3Quantity.Location = new System.Drawing.Point(217, 29);
+            this.Item3Quantity.Name = "Item3Quantity";
+            this.Item3Quantity.Size = new System.Drawing.Size(32, 16);
+            this.Item3Quantity.TabIndex = 85;
+            this.Item3Quantity.Text = "000";
+            // 
+            // Item2Quantity
+            // 
+            this.Item2Quantity.AutoSize = true;
+            this.Item2Quantity.BackColor = System.Drawing.Color.Transparent;
+            this.Item2Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Item2Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Item2Quantity.Location = new System.Drawing.Point(128, 31);
+            this.Item2Quantity.Name = "Item2Quantity";
+            this.Item2Quantity.Size = new System.Drawing.Size(32, 16);
+            this.Item2Quantity.TabIndex = 84;
+            this.Item2Quantity.Text = "000";
+            // 
+            // Item1Quantity
+            // 
+            this.Item1Quantity.AutoSize = true;
+            this.Item1Quantity.BackColor = System.Drawing.Color.Transparent;
+            this.Item1Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Item1Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Item1Quantity.Location = new System.Drawing.Point(39, 31);
+            this.Item1Quantity.Name = "Item1Quantity";
+            this.Item1Quantity.Size = new System.Drawing.Size(32, 16);
+            this.Item1Quantity.TabIndex = 83;
+            this.Item1Quantity.Text = "000";
+            // 
             // Item5Label
             // 
             this.Item5Label.AutoSize = true;
@@ -470,6 +531,66 @@
             this.Items2Panel.Size = new System.Drawing.Size(421, 49);
             this.Items2Panel.TabIndex = 60;
             // 
+            // Item10Quantity
+            // 
+            this.Item10Quantity.AutoSize = true;
+            this.Item10Quantity.BackColor = System.Drawing.Color.Transparent;
+            this.Item10Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Item10Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Item10Quantity.Location = new System.Drawing.Point(386, 31);
+            this.Item10Quantity.Name = "Item10Quantity";
+            this.Item10Quantity.Size = new System.Drawing.Size(32, 16);
+            this.Item10Quantity.TabIndex = 92;
+            this.Item10Quantity.Text = "000";
+            // 
+            // Item9Quantity
+            // 
+            this.Item9Quantity.AutoSize = true;
+            this.Item9Quantity.BackColor = System.Drawing.Color.Transparent;
+            this.Item9Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Item9Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Item9Quantity.Location = new System.Drawing.Point(309, 29);
+            this.Item9Quantity.Name = "Item9Quantity";
+            this.Item9Quantity.Size = new System.Drawing.Size(32, 16);
+            this.Item9Quantity.TabIndex = 91;
+            this.Item9Quantity.Text = "000";
+            // 
+            // Item8Quantity
+            // 
+            this.Item8Quantity.AutoSize = true;
+            this.Item8Quantity.BackColor = System.Drawing.Color.Transparent;
+            this.Item8Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Item8Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Item8Quantity.Location = new System.Drawing.Point(214, 30);
+            this.Item8Quantity.Name = "Item8Quantity";
+            this.Item8Quantity.Size = new System.Drawing.Size(32, 16);
+            this.Item8Quantity.TabIndex = 90;
+            this.Item8Quantity.Text = "000";
+            // 
+            // Item7Quantity
+            // 
+            this.Item7Quantity.AutoSize = true;
+            this.Item7Quantity.BackColor = System.Drawing.Color.Transparent;
+            this.Item7Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Item7Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Item7Quantity.Location = new System.Drawing.Point(125, 31);
+            this.Item7Quantity.Name = "Item7Quantity";
+            this.Item7Quantity.Size = new System.Drawing.Size(32, 16);
+            this.Item7Quantity.TabIndex = 89;
+            this.Item7Quantity.Text = "000";
+            // 
+            // Item6Quantity
+            // 
+            this.Item6Quantity.AutoSize = true;
+            this.Item6Quantity.BackColor = System.Drawing.Color.Transparent;
+            this.Item6Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Item6Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Item6Quantity.Location = new System.Drawing.Point(38, 31);
+            this.Item6Quantity.Name = "Item6Quantity";
+            this.Item6Quantity.Size = new System.Drawing.Size(32, 16);
+            this.Item6Quantity.TabIndex = 88;
+            this.Item6Quantity.Text = "000";
+            // 
             // Item10Label
             // 
             this.Item10Label.AutoSize = true;
@@ -612,6 +733,66 @@
             this.Items3Panel.Name = "Items3Panel";
             this.Items3Panel.Size = new System.Drawing.Size(421, 49);
             this.Items3Panel.TabIndex = 61;
+            // 
+            // Item15Quantity
+            // 
+            this.Item15Quantity.AutoSize = true;
+            this.Item15Quantity.BackColor = System.Drawing.Color.Transparent;
+            this.Item15Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Item15Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Item15Quantity.Location = new System.Drawing.Point(388, 28);
+            this.Item15Quantity.Name = "Item15Quantity";
+            this.Item15Quantity.Size = new System.Drawing.Size(32, 16);
+            this.Item15Quantity.TabIndex = 93;
+            this.Item15Quantity.Text = "000";
+            // 
+            // Item14Quantity
+            // 
+            this.Item14Quantity.AutoSize = true;
+            this.Item14Quantity.BackColor = System.Drawing.Color.Transparent;
+            this.Item14Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Item14Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Item14Quantity.Location = new System.Drawing.Point(311, 28);
+            this.Item14Quantity.Name = "Item14Quantity";
+            this.Item14Quantity.Size = new System.Drawing.Size(32, 16);
+            this.Item14Quantity.TabIndex = 92;
+            this.Item14Quantity.Text = "000";
+            // 
+            // Item13Quantity
+            // 
+            this.Item13Quantity.AutoSize = true;
+            this.Item13Quantity.BackColor = System.Drawing.Color.Transparent;
+            this.Item13Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Item13Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Item13Quantity.Location = new System.Drawing.Point(211, 30);
+            this.Item13Quantity.Name = "Item13Quantity";
+            this.Item13Quantity.Size = new System.Drawing.Size(32, 16);
+            this.Item13Quantity.TabIndex = 91;
+            this.Item13Quantity.Text = "000";
+            // 
+            // Item12Quantity
+            // 
+            this.Item12Quantity.AutoSize = true;
+            this.Item12Quantity.BackColor = System.Drawing.Color.Transparent;
+            this.Item12Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Item12Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Item12Quantity.Location = new System.Drawing.Point(125, 30);
+            this.Item12Quantity.Name = "Item12Quantity";
+            this.Item12Quantity.Size = new System.Drawing.Size(32, 16);
+            this.Item12Quantity.TabIndex = 90;
+            this.Item12Quantity.Text = "000";
+            // 
+            // Item11Quantity
+            // 
+            this.Item11Quantity.AutoSize = true;
+            this.Item11Quantity.BackColor = System.Drawing.Color.Transparent;
+            this.Item11Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Item11Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Item11Quantity.Location = new System.Drawing.Point(40, 30);
+            this.Item11Quantity.Name = "Item11Quantity";
+            this.Item11Quantity.Size = new System.Drawing.Size(32, 16);
+            this.Item11Quantity.TabIndex = 89;
+            this.Item11Quantity.Text = "000";
             // 
             // Item15Label
             // 
@@ -961,6 +1142,7 @@
             this.item2_5.Name = "item2_5";
             this.item2_5.Size = new System.Drawing.Size(37, 55);
             this.item2_5.TabIndex = 87;
+            this.item2_5.Click += new System.EventHandler(this.item2_5_Click);
             // 
             // item2_4
             // 
@@ -971,6 +1153,7 @@
             this.item2_4.Name = "item2_4";
             this.item2_4.Size = new System.Drawing.Size(37, 55);
             this.item2_4.TabIndex = 86;
+            this.item2_4.Click += new System.EventHandler(this.item2_4_Click);
             // 
             // item2_2
             // 
@@ -1014,6 +1197,7 @@
             this.item3_5.Name = "item3_5";
             this.item3_5.Size = new System.Drawing.Size(37, 55);
             this.item3_5.TabIndex = 92;
+            this.item3_5.Click += new System.EventHandler(this.item3_5_Click);
             // 
             // item3_4
             // 
@@ -1024,6 +1208,7 @@
             this.item3_4.Name = "item3_4";
             this.item3_4.Size = new System.Drawing.Size(37, 55);
             this.item3_4.TabIndex = 91;
+            this.item3_4.Click += new System.EventHandler(this.item3_4_Click);
             // 
             // item3_2
             // 
@@ -1034,6 +1219,7 @@
             this.item3_2.Name = "item3_2";
             this.item3_2.Size = new System.Drawing.Size(37, 55);
             this.item3_2.TabIndex = 89;
+            this.item3_2.Click += new System.EventHandler(this.item3_2_Click);
             // 
             // item3_3
             // 
@@ -1044,6 +1230,7 @@
             this.item3_3.Name = "item3_3";
             this.item3_3.Size = new System.Drawing.Size(37, 55);
             this.item3_3.TabIndex = 90;
+            this.item3_3.Click += new System.EventHandler(this.item3_3_Click);
             // 
             // item3_1
             // 
@@ -1054,6 +1241,7 @@
             this.item3_1.Name = "item3_1";
             this.item3_1.Size = new System.Drawing.Size(37, 55);
             this.item3_1.TabIndex = 88;
+            this.item3_1.Click += new System.EventHandler(this.item3_1_Click);
             // 
             // AccountingButton
             // 
@@ -1150,185 +1338,17 @@
             this.Pictures3Panel.Size = new System.Drawing.Size(421, 60);
             this.Pictures3Panel.TabIndex = 95;
             // 
-            // Item1Quantity
+            // basketCountLabel
             // 
-            this.Item1Quantity.AutoSize = true;
-            this.Item1Quantity.BackColor = System.Drawing.Color.Transparent;
-            this.Item1Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Item1Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Item1Quantity.Location = new System.Drawing.Point(39, 31);
-            this.Item1Quantity.Name = "Item1Quantity";
-            this.Item1Quantity.Size = new System.Drawing.Size(32, 16);
-            this.Item1Quantity.TabIndex = 83;
-            this.Item1Quantity.Text = "000";
-            // 
-            // Item2Quantity
-            // 
-            this.Item2Quantity.AutoSize = true;
-            this.Item2Quantity.BackColor = System.Drawing.Color.Transparent;
-            this.Item2Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Item2Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Item2Quantity.Location = new System.Drawing.Point(128, 31);
-            this.Item2Quantity.Name = "Item2Quantity";
-            this.Item2Quantity.Size = new System.Drawing.Size(32, 16);
-            this.Item2Quantity.TabIndex = 84;
-            this.Item2Quantity.Text = "000";
-            // 
-            // Item3Quantity
-            // 
-            this.Item3Quantity.AutoSize = true;
-            this.Item3Quantity.BackColor = System.Drawing.Color.Transparent;
-            this.Item3Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Item3Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Item3Quantity.Location = new System.Drawing.Point(217, 29);
-            this.Item3Quantity.Name = "Item3Quantity";
-            this.Item3Quantity.Size = new System.Drawing.Size(32, 16);
-            this.Item3Quantity.TabIndex = 85;
-            this.Item3Quantity.Text = "000";
-            // 
-            // Item4Quantity
-            // 
-            this.Item4Quantity.AutoSize = true;
-            this.Item4Quantity.BackColor = System.Drawing.Color.Transparent;
-            this.Item4Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Item4Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Item4Quantity.Location = new System.Drawing.Point(315, 31);
-            this.Item4Quantity.Name = "Item4Quantity";
-            this.Item4Quantity.Size = new System.Drawing.Size(32, 16);
-            this.Item4Quantity.TabIndex = 86;
-            this.Item4Quantity.Text = "000";
-            // 
-            // Item5Quantity
-            // 
-            this.Item5Quantity.AutoSize = true;
-            this.Item5Quantity.BackColor = System.Drawing.Color.Transparent;
-            this.Item5Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Item5Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Item5Quantity.Location = new System.Drawing.Point(392, 33);
-            this.Item5Quantity.Name = "Item5Quantity";
-            this.Item5Quantity.Size = new System.Drawing.Size(32, 16);
-            this.Item5Quantity.TabIndex = 87;
-            this.Item5Quantity.Text = "000";
-            // 
-            // Item6Quantity
-            // 
-            this.Item6Quantity.AutoSize = true;
-            this.Item6Quantity.BackColor = System.Drawing.Color.Transparent;
-            this.Item6Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Item6Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Item6Quantity.Location = new System.Drawing.Point(38, 31);
-            this.Item6Quantity.Name = "Item6Quantity";
-            this.Item6Quantity.Size = new System.Drawing.Size(32, 16);
-            this.Item6Quantity.TabIndex = 88;
-            this.Item6Quantity.Text = "000";
-            // 
-            // Item7Quantity
-            // 
-            this.Item7Quantity.AutoSize = true;
-            this.Item7Quantity.BackColor = System.Drawing.Color.Transparent;
-            this.Item7Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Item7Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Item7Quantity.Location = new System.Drawing.Point(125, 31);
-            this.Item7Quantity.Name = "Item7Quantity";
-            this.Item7Quantity.Size = new System.Drawing.Size(32, 16);
-            this.Item7Quantity.TabIndex = 89;
-            this.Item7Quantity.Text = "000";
-            // 
-            // Item8Quantity
-            // 
-            this.Item8Quantity.AutoSize = true;
-            this.Item8Quantity.BackColor = System.Drawing.Color.Transparent;
-            this.Item8Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Item8Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Item8Quantity.Location = new System.Drawing.Point(214, 30);
-            this.Item8Quantity.Name = "Item8Quantity";
-            this.Item8Quantity.Size = new System.Drawing.Size(32, 16);
-            this.Item8Quantity.TabIndex = 90;
-            this.Item8Quantity.Text = "000";
-            // 
-            // Item9Quantity
-            // 
-            this.Item9Quantity.AutoSize = true;
-            this.Item9Quantity.BackColor = System.Drawing.Color.Transparent;
-            this.Item9Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Item9Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Item9Quantity.Location = new System.Drawing.Point(309, 29);
-            this.Item9Quantity.Name = "Item9Quantity";
-            this.Item9Quantity.Size = new System.Drawing.Size(32, 16);
-            this.Item9Quantity.TabIndex = 91;
-            this.Item9Quantity.Text = "000";
-            // 
-            // Item10Quantity
-            // 
-            this.Item10Quantity.AutoSize = true;
-            this.Item10Quantity.BackColor = System.Drawing.Color.Transparent;
-            this.Item10Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Item10Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Item10Quantity.Location = new System.Drawing.Point(386, 31);
-            this.Item10Quantity.Name = "Item10Quantity";
-            this.Item10Quantity.Size = new System.Drawing.Size(32, 16);
-            this.Item10Quantity.TabIndex = 92;
-            this.Item10Quantity.Text = "000";
-            // 
-            // Item11Quantity
-            // 
-            this.Item11Quantity.AutoSize = true;
-            this.Item11Quantity.BackColor = System.Drawing.Color.Transparent;
-            this.Item11Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Item11Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Item11Quantity.Location = new System.Drawing.Point(40, 30);
-            this.Item11Quantity.Name = "Item11Quantity";
-            this.Item11Quantity.Size = new System.Drawing.Size(32, 16);
-            this.Item11Quantity.TabIndex = 89;
-            this.Item11Quantity.Text = "000";
-            // 
-            // Item12Quantity
-            // 
-            this.Item12Quantity.AutoSize = true;
-            this.Item12Quantity.BackColor = System.Drawing.Color.Transparent;
-            this.Item12Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Item12Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Item12Quantity.Location = new System.Drawing.Point(125, 30);
-            this.Item12Quantity.Name = "Item12Quantity";
-            this.Item12Quantity.Size = new System.Drawing.Size(32, 16);
-            this.Item12Quantity.TabIndex = 90;
-            this.Item12Quantity.Text = "000";
-            // 
-            // Item13Quantity
-            // 
-            this.Item13Quantity.AutoSize = true;
-            this.Item13Quantity.BackColor = System.Drawing.Color.Transparent;
-            this.Item13Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Item13Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Item13Quantity.Location = new System.Drawing.Point(211, 30);
-            this.Item13Quantity.Name = "Item13Quantity";
-            this.Item13Quantity.Size = new System.Drawing.Size(32, 16);
-            this.Item13Quantity.TabIndex = 91;
-            this.Item13Quantity.Text = "000";
-            // 
-            // Item14Quantity
-            // 
-            this.Item14Quantity.AutoSize = true;
-            this.Item14Quantity.BackColor = System.Drawing.Color.Transparent;
-            this.Item14Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Item14Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Item14Quantity.Location = new System.Drawing.Point(311, 28);
-            this.Item14Quantity.Name = "Item14Quantity";
-            this.Item14Quantity.Size = new System.Drawing.Size(32, 16);
-            this.Item14Quantity.TabIndex = 92;
-            this.Item14Quantity.Text = "000";
-            // 
-            // Item15Quantity
-            // 
-            this.Item15Quantity.AutoSize = true;
-            this.Item15Quantity.BackColor = System.Drawing.Color.Transparent;
-            this.Item15Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Item15Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Item15Quantity.Location = new System.Drawing.Point(388, 28);
-            this.Item15Quantity.Name = "Item15Quantity";
-            this.Item15Quantity.Size = new System.Drawing.Size(32, 16);
-            this.Item15Quantity.TabIndex = 93;
-            this.Item15Quantity.Text = "000";
+            this.basketCountLabel.AutoSize = true;
+            this.basketCountLabel.BackColor = System.Drawing.Color.Transparent;
+            this.basketCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.basketCountLabel.ForeColor = System.Drawing.Color.Gold;
+            this.basketCountLabel.Location = new System.Drawing.Point(347, 575);
+            this.basketCountLabel.Name = "basketCountLabel";
+            this.basketCountLabel.Size = new System.Drawing.Size(30, 31);
+            this.basketCountLabel.TabIndex = 96;
+            this.basketCountLabel.Text = "0";
             // 
             // ShopForm
             // 
@@ -1337,6 +1357,7 @@
             this.BackgroundImage = global::The_Shop.Properties.Resources.background2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(498, 604);
+            this.Controls.Add(this.basketCountLabel);
             this.Controls.Add(this.Pictures3Panel);
             this.Controls.Add(this.Pictures2Panel);
             this.Controls.Add(this.Pictures1Panel);
@@ -1385,6 +1406,7 @@
             this.Pictures2Panel.ResumeLayout(false);
             this.Pictures3Panel.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1483,5 +1505,6 @@
         private System.Windows.Forms.Label Item13Quantity;
         private System.Windows.Forms.Label Item12Quantity;
         private System.Windows.Forms.Label Item11Quantity;
+        public System.Windows.Forms.Label basketCountLabel;
     }
 }

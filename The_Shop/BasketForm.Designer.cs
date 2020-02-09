@@ -31,8 +31,8 @@
             this.basketListBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.amountLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.buyButton = new System.Windows.Forms.Button();
+            this.moneyLabel = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -77,29 +77,30 @@
             this.amountLabel.TabIndex = 2;
             this.amountLabel.Text = "0$";
             // 
-            // button1
+            // buyButton
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(225, 209);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(58, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Buy";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.buyButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buyButton.Location = new System.Drawing.Point(245, 209);
+            this.buyButton.Name = "buyButton";
+            this.buyButton.Size = new System.Drawing.Size(58, 23);
+            this.buyButton.TabIndex = 3;
+            this.buyButton.Text = "Buy";
+            this.buyButton.UseVisualStyleBackColor = false;
+            this.buyButton.Click += new System.EventHandler(this.buyButton_Click);
             // 
-            // label3
+            // moneyLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(218, 24);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 25);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "0$";
+            this.moneyLabel.AutoSize = true;
+            this.moneyLabel.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.moneyLabel.ForeColor = System.Drawing.Color.White;
+            this.moneyLabel.Location = new System.Drawing.Point(218, 24);
+            this.moneyLabel.Name = "moneyLabel";
+            this.moneyLabel.Size = new System.Drawing.Size(38, 25);
+            this.moneyLabel.TabIndex = 4;
+            this.moneyLabel.Text = "0$";
             // 
             // button2
             // 
@@ -178,8 +179,8 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.moneyLabel);
+            this.Controls.Add(this.buyButton);
             this.Controls.Add(this.amountLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.basketListBox);
@@ -198,8 +199,8 @@
         private System.Windows.Forms.ListBox basketListBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label amountLabel;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button buyButton;
+        private System.Windows.Forms.Label moneyLabel;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;

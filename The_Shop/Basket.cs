@@ -8,6 +8,7 @@ namespace The_Shop
 {
     public static class Basket
     {
+        public static int count = 0;
         public static List<string> items = new List<string>();
         public static int quantity;
         public static int price;
