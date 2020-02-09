@@ -1256,7 +1256,6 @@
             this.AccountingButton.TabIndex = 3;
             this.AccountingButton.Text = "Accounting";
             this.AccountingButton.UseVisualStyleBackColor = false;
-            this.AccountingButton.Visible = false;
             this.AccountingButton.Click += new System.EventHandler(this.AccountingButton_Click);
             // 
             // Pictures1Panel

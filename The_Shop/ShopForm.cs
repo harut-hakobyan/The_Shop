@@ -114,6 +114,21 @@ namespace The_Shop
                 }
             }
             labelList.Clear();
+            MySqlCommand mysql_query2 = DbConnector.conn.CreateCommand();
+            mysql_query2.CommandText = $"SELECT Value FROM Profit";
+            MySqlDataReader mysql_result2;
+            mysql_result2 = mysql_query2.ExecuteReader();
+            int counter =0;
+            while (mysql_result2.Read())
+            {
+                if(counter == 0)
+                    Account.profit = int.Parse(mysql_result2.GetString(0).ToString());
+                else
+                    Account.saledProducts = int.Parse(mysql_result2.GetString(0).ToString());
+                counter++;
+
+            }
+            mysql_result2.Close();
         }
         int tmpX, tmpY;
         bool mousedown;
@@ -146,9 +161,7 @@ namespace The_Shop
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
-        Point point;
-
+        
         private void AdmPanelButton_Click(object sender, EventArgs e)
         {
             var admPanel = new AdmPanelForm();
@@ -158,7 +171,7 @@ namespace The_Shop
         private void AccountingButton_Click(object sender, EventArgs e)
         {
             var accountingForm = new AccountingForm();
-            accountingForm.Show();
+            accountingForm.ShowDialog();
         }
 
         private void Item1Button_Click(object sender, EventArgs e)
@@ -450,7 +463,6 @@ namespace The_Shop
             }
         }
         private string[][] productsArray = new string[16][];
-        int counter = 1;
         private List<ShopProduct> changeProducts()
         {
             List<ShopProduct> shopProductList = new List<ShopProduct>();
