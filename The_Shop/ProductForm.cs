@@ -1,6 +1,9 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Collections.Generic;
 
 namespace The_Shop
 {
@@ -27,6 +30,7 @@ namespace The_Shop
         }
         private void RefreshList()
         {
+            int prodId =0;
             ProductListBox.Items.Clear();
             MySqlCommand mysql_query = DbConnector.conn.CreateCommand();
             mysql_query.CommandText = $"SELECT ID,Name,Quantity FROM Warehouse";
@@ -34,16 +38,42 @@ namespace The_Shop
             mysql_result = mysql_query.ExecuteReader();
             while (mysql_result.Read())
             {
-                ProductListBox.Items.Add(mysql_result.GetString(0).ToString() + " " + " " + mysql_result.GetString(1).ToString() + " - " + mysql_result.GetString(2).ToString());
+                int tmpInt = int.Parse(mysql_result.GetString(2).ToString());
+                if (tmpInt != 0)
+                {
+                    ProductListBox.Items.Add(mysql_result.GetString(0).ToString() + " " + " " + mysql_result.GetString(1).ToString() + " - " + " " + mysql_result.GetString(2).ToString());
+                }
+                else
+                    prodId = int.Parse(mysql_result.GetString(0).ToString());
             }
             mysql_result.Close();
+            if (prodId != 0)
+            {
+                string query = $"DELETE FROM Warehouse WHERE ID = '{prodId}'";
+                MySqlScript script = new MySqlScript(DbConnector.conn, query);
+                int count = script.Execute();
+            }
         }
         int idProd;
+        int countProd;
         private void ProductListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             string textString = ProductListBox.SelectedItem.ToString();
             string idText = textString.Substring(0, 2);
             idProd = int.Parse(idText);
+
+            MySqlCommand mysql_query = DbConnector.conn.CreateCommand();
+            mysql_query.CommandText = $"SELECT Quantity FROM Warehouse WHERE ID = '{idProd}'";
+            MySqlDataReader mysql_result;
+            mysql_result = mysql_query.ExecuteReader();
+            while (mysql_result.Read())
+            {
+                countProd = int.Parse(mysql_result.GetString(0).ToString());
+            }
+            Product.price = (double)PriceBox.Value;
+            Product.quantity = (int)QuantityBox.Value;
+            mysql_result.Close();
+
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -64,6 +94,11 @@ namespace The_Shop
                     Product.price = (double)PriceBox.Value;
                     Product.quantity = (int)QuantityBox.Value;
                     mysql_result.Close();
+                    MySqlCommand mysql_query2 = DbConnector.conn.CreateCommand();
+                    mysql_query2.CommandText = $"UPDATE Warehouse SET QUantity = '{countProd - QuantityBox.Value}' WHERE ID = '{idProd}'";
+                    MySqlDataReader mysql_result2;
+                    mysql_result2 = mysql_query2.ExecuteReader();
+                    mysql_result2.Close();
                     DialogResult = DialogResult.OK;
                 }
                 else

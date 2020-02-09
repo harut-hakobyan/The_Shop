@@ -506,7 +506,7 @@ namespace The_Shop
 
         private void item1_Click(object sender, EventArgs e)
         {
-            selectProduct(Item1Label, Item1Price);
+            selectProduct(Item1Label, Item1Price,Item1Quantity);
         }
 
         private void BasketPictureBox_Click(object sender, EventArgs e)
@@ -521,81 +521,91 @@ namespace The_Shop
 
         private void item2_Click(object sender, EventArgs e)
         {
-            selectProduct(Item2Label,Item2Price);
+            selectProduct(Item2Label,Item2Price,Item2Quantity);
         }
-        private void selectProduct(Label label, Label price)
+        private void selectProduct(Label label, Label price,Label quantity)
         {
-            Basket.count++;
-            basketCountLabel.Text = Basket.count.ToString();
-            Basket.items.Add(label.Text + " " + price.Text);
-            string tmp = price.Text;
-            string tmp2 = tmp.Substring(0, tmp.Length - 1);
-            Basket.amount += int.Parse(tmp2);
+            int tmp3 = int.Parse(quantity.Text);
+            if (tmp3 != 0)
+            {
+                Basket.count++;
+                basketCountLabel.Text = Basket.count.ToString();
+                Basket.items.Add(label.Text + " " + price.Text);
+                string tmp = price.Text;
+                string tmp2 = tmp.Substring(0, tmp.Length - 1);
+                Basket.amount += int.Parse(tmp2);
+
+                tmp3--;
+                quantity.Text = tmp3.ToString();
+            }
+            else
+                MessageBox.Show("No available product");
+            
         }
 
         private void item3_Click(object sender, EventArgs e)
         {
-            selectProduct(Item3Label, Item3Price);
+            selectProduct(Item3Label, Item3Price, Item3Quantity);
         }
 
         private void item4_Click(object sender, EventArgs e)
         {
-            selectProduct(Item4Label, Item4Price);
+            selectProduct(Item4Label, Item4Price, Item4Quantity);
         }
 
         private void item5_Click(object sender, EventArgs e)
         {
-            selectProduct(Item5Label, Item5Price);
+            selectProduct(Item5Label, Item5Price, Item5Quantity);
         }
 
         private void item2_1_Click(object sender, EventArgs e)
         {
-            selectProduct(Item6Label, Item6Price);
+            selectProduct(Item6Label, Item6Price, Item6Quantity);
         }
 
         private void item2_2_Click(object sender, EventArgs e)
         {
-            selectProduct(Item7Label, Item7Price);
+            selectProduct(Item7Label, Item7Price, Item7Quantity);
         }
 
         private void item2_3_Click(object sender, EventArgs e)
         {
-            selectProduct(Item8Label, Item8Price);
+            selectProduct(Item8Label, Item8Price, Item8Quantity);
         }
 
         private void item2_4_Click(object sender, EventArgs e)
         {
-            selectProduct(Item9Label, Item9Price);
+            selectProduct(Item9Label, Item9Price, Item9Quantity);
         }
 
         private void item2_5_Click(object sender, EventArgs e)
         {
-            selectProduct(Item10Label, Item10Price);
+            selectProduct(Item10Label, Item10Price, Item10Quantity);
         }
 
         private void item3_1_Click(object sender, EventArgs e)
         {
-            selectProduct(Item11Label, Item11Price);
+            selectProduct(Item11Label, Item11Price, Item11Quantity);
         }
 
         private void item3_2_Click(object sender, EventArgs e)
         {
-            selectProduct(Item12Label, Item12Price);
+            selectProduct(Item12Label, Item12Price, Item12Quantity);
         }
 
         private void item3_3_Click(object sender, EventArgs e)
         {
-            selectProduct(Item13Label, Item13Price);
+            selectProduct(Item13Label, Item13Price, Item13Quantity);
         }
 
         private void item3_4_Click(object sender, EventArgs e)
         {
-            selectProduct(Item14Label, Item14Price);
+            selectProduct(Item14Label, Item14Price, Item14Quantity);
         }
 
         private void item3_5_Click(object sender, EventArgs e)
         {
-            selectProduct(Item15Label, Item15Price);
+            selectProduct(Item15Label, Item15Price, Item15Quantity);
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)

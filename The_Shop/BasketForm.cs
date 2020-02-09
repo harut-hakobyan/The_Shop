@@ -23,6 +23,18 @@ namespace The_Shop
             {
                 basketListBox.Items.Add(item);
             }
+            //string tmp = "";
+            //int tmp2 =0;
+            //foreach (var item in Basket.items)
+            //{
+                
+            //    if (item == tmp)
+            //    {
+            //        tmp2++;
+            //    }
+            //    tmp = item;
+            //}
+            //MessageBox.Show(tmp2.ToString());
         }
         private void button2_Click(object sender, EventArgs e)
         {

@@ -46,10 +46,27 @@
             // 
             // QuantityBox
             // 
+            this.QuantityBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.QuantityBox.Location = new System.Drawing.Point(91, 292);
+            this.QuantityBox.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            this.QuantityBox.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.QuantityBox.Name = "QuantityBox";
             this.QuantityBox.Size = new System.Drawing.Size(45, 20);
             this.QuantityBox.TabIndex = 2;
+            this.QuantityBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.QuantityBox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // addButton
             // 
@@ -78,10 +95,12 @@
             // 
             // PriceBox
             // 
+            this.PriceBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PriceBox.Location = new System.Drawing.Point(91, 264);
             this.PriceBox.Name = "PriceBox";
             this.PriceBox.Size = new System.Drawing.Size(45, 20);
             this.PriceBox.TabIndex = 5;
+            this.PriceBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
