@@ -89,7 +89,6 @@ namespace The_Shop
         {
             DialogResult = DialogResult.Cancel;
             this.Close();
-            this.Close();
         }
         int tmpX, tmpY;
         bool mousedown;

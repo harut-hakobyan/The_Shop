@@ -62,38 +62,29 @@ namespace The_Shop
                 if (Account.level == "Admin" || Account.level == "Worker")
                 {
                     foreach (var item in buttonList)
-                    {
                         item.Visible = true;
-                    }
                     foreach (var item in labelList)
-                    {
                         item.Visible = true;
-                    }
                     if (Account.level == "Admin")
                     {
                         AdmPanelButton.Visible = true;
                         AccountingButton.Visible = true;
                     }
                     if (Account.level == "Worker")
-                    {
                         Account.buy = false;
-                    }
+                    else
+                        Account.buy = true;
                 }
             }
             else
             {
                 foreach (var item in buttonList)
-                {
                     item.Visible = false;
-                }
                 foreach (var item in labelList)
-                {
                     item.Visible = false;
-                }
                 AdmPanelButton.Visible = false;
                 AccountingButton.Visible = false;
             }
-            
         }
         private void shopProductRefresh()
         {
@@ -112,42 +103,35 @@ namespace The_Shop
                 else
                     panelList[i].BackgroundImage = null;
             }
-            
             panelList.Clear();
             foreach (var item in Pictures2Panel.Controls)
-            {
                 panelList.Add((Panel)item);
-            }
-            //panelList.Reverse();
             for (int i = 0; i < 5; i++)
-            {
                     panelList[i].BackgroundImage = Image.FromFile(@"Products\" + changeProducts()[i + 5].picture);
-            }
             panelList.Clear();
             foreach (var item in Pictures3Panel.Controls)
-            {
                 panelList.Add((Panel)item);
-            }
-            //panelList.Reverse();
             for (int i = 0; i < 5; i++)
-            {
                 panelList[i].BackgroundImage = Image.FromFile(@"Products\" + changeProducts()[i + 10].picture);
-            }
             panelList.Clear();
             foreach (var item in Items1Panel.Controls)
-            {
                 labelList.Add((Label)item);
-            }
-            
             labelList.Reverse();
             int counter1 = 1;
             for (int i = 0; i < 10; i++)
             {
                 if (i > 4)
                 {
-                    labelList[i+5].Text = changeProducts()[i - 5].quantity;
-                    Product.quantityDict.Add(counter1, int.Parse(changeProducts()[i - 5].quantity));
-                    counter1++;
+                    try
+                    {
+                        labelList[i + 5].Text = changeProducts()[i - 5].quantity;
+                        Product.quantityDict.Add(counter1, int.Parse(changeProducts()[i - 5].quantity));
+                        counter1++;
+                    }
+                    catch
+                    {
+
+                    }
                 }
                 else
                 {
@@ -157,17 +141,22 @@ namespace The_Shop
             }
             labelList.Clear();
             foreach (var item in Items2Panel.Controls)
-            {
                 labelList.Add((Label)item);
-            }
             labelList.Reverse();
             for (int i = 0; i < 10; i++)
             {
                 if (i > 4)
                 {
-                    labelList[i + 5].Text = changeProducts()[i].quantity;
-                    Product.quantityDict.Add(counter1, int.Parse(changeProducts()[i - 5].quantity));
-                    counter1++;
+                    try
+                    {
+                        labelList[i + 5].Text = changeProducts()[i].quantity;
+                        Product.quantityDict.Add(counter1, int.Parse(changeProducts()[i - 5].quantity));
+                        counter1++;
+                    }
+                    catch
+                    {
+
+                    }
                 }
                 else
                 {
@@ -177,17 +166,24 @@ namespace The_Shop
             }
             labelList.Clear();
             foreach (var item in Items3Panel.Controls)
-            {
                 labelList.Add((Label)item);
-            }
             labelList.Reverse();
             for (int i = 0; i < 10; i++)
             {
+                
                 if (i > 4)
                 {
-                    labelList[i + 5].Text = changeProducts()[i+5].quantity;
-                    Product.quantityDict.Add(counter1, int.Parse(changeProducts()[i - 5].quantity));
-                    counter1++;
+                    try
+                    {
+                        labelList[i + 5].Text = changeProducts()[i + 5].quantity;
+                        Product.quantityDict.Add(counter1, int.Parse(changeProducts()[i - 5].quantity));
+                        counter1++;
+                    }
+                    catch
+                    {
+
+                    }
+                    
                 }
                 else
                 {
@@ -208,7 +204,6 @@ namespace The_Shop
                 else
                     Account.saledProducts = int.Parse(mysql_result2.GetString(0).ToString());
                 counter++;
-
             }
             mysql_result2.Close();
         }
@@ -247,7 +242,7 @@ namespace The_Shop
         private void AdmPanelButton_Click(object sender, EventArgs e)
         {
             var admPanel = new AdmPanelForm();
-            admPanel.Show();
+            admPanel.ShowDialog();
         }
 
         private void AccountingButton_Click(object sender, EventArgs e)
@@ -258,6 +253,8 @@ namespace The_Shop
 
         private void Item1Button_Click(object sender, EventArgs e)
         {
+            Product.quantityTmp = int.Parse(Item1Quantity.Text);
+            Product.nameTmp = Item1Label.Text;
             var productForm = new ProductForm();
             productForm.ShowDialog();
             if (productForm.DialogResult == DialogResult.OK)
@@ -285,7 +282,7 @@ namespace The_Shop
         private void DeleteProduct(int id)
         {
             MySqlCommand mysql_query = DbConnector.conn.CreateCommand();
-            mysql_query.CommandText = $"UPDATE Products SET Name = '',Quantity = '0',Price = '000',Picture = 'null' WHERE ID = '{id}'";
+            mysql_query.CommandText = $"UPDATE Products SET Name = '',Quantity = '0',Price = '000',Picture = 'null.png' WHERE ID = '{id}'";
             MySqlDataReader mysql_result;
             mysql_result = mysql_query.ExecuteReader();
             MessageBox.Show("Product deleted");
@@ -295,6 +292,8 @@ namespace The_Shop
 
         private void Item2Button_Click(object sender, EventArgs e)
         {
+            Product.quantityTmp = int.Parse(Item2Quantity.Text);
+            Product.nameTmp = Item2Label.Text;
             var productForm = new ProductForm();
             productForm.ShowDialog();
             if (productForm.DialogResult == DialogResult.OK)
@@ -313,6 +312,8 @@ namespace The_Shop
 
         private void Item3Button_Click(object sender, EventArgs e)
         {
+            Product.quantityTmp = int.Parse(Item3Quantity.Text);
+            Product.nameTmp = Item3Label.Text;
             var productForm = new ProductForm();
             productForm.ShowDialog();
             if (productForm.DialogResult == DialogResult.OK)
@@ -331,6 +332,8 @@ namespace The_Shop
 
         private void Item4Button_Click(object sender, EventArgs e)
         {
+            Product.quantityTmp = int.Parse(Item4Quantity.Text);
+            Product.nameTmp = Item4Label.Text;
             var productForm = new ProductForm();
             productForm.ShowDialog();
             if (productForm.DialogResult == DialogResult.OK)
@@ -349,6 +352,8 @@ namespace The_Shop
 
         private void Item5Button_Click(object sender, EventArgs e)
         {
+            Product.quantityTmp = int.Parse(Item5Quantity.Text);
+            Product.nameTmp = Item5Label.Text;
             var productForm = new ProductForm();
             productForm.ShowDialog();
             if (productForm.DialogResult == DialogResult.OK)
@@ -367,6 +372,8 @@ namespace The_Shop
 
         private void Item6Button_Click(object sender, EventArgs e)
         {
+            Product.quantityTmp = int.Parse(Item6Quantity.Text);
+            Product.nameTmp = Item6Label.Text;
             var productForm = new ProductForm();
             productForm.ShowDialog();
             if (productForm.DialogResult == DialogResult.OK)
@@ -385,6 +392,8 @@ namespace The_Shop
 
         private void Item7Button_Click(object sender, EventArgs e)
         {
+            Product.quantityTmp = int.Parse(Item7Quantity.Text);
+            Product.nameTmp = Item7Label.Text;
             var productForm = new ProductForm();
             productForm.ShowDialog();
             if (productForm.DialogResult == DialogResult.OK)
@@ -403,6 +412,8 @@ namespace The_Shop
 
         private void Item8Button_Click(object sender, EventArgs e)
         {
+            Product.quantityTmp = int.Parse(Item8Quantity.Text);
+            Product.nameTmp = Item8Label.Text;
             var productForm = new ProductForm();
             productForm.ShowDialog();
             if (productForm.DialogResult == DialogResult.OK)
@@ -421,6 +432,8 @@ namespace The_Shop
 
         private void Item9Button_Click(object sender, EventArgs e)
         {
+            Product.quantityTmp = int.Parse(Item9Quantity.Text);
+            Product.nameTmp = Item9Label.Text;
             var productForm = new ProductForm();
             productForm.ShowDialog();
             if (productForm.DialogResult == DialogResult.OK)
@@ -439,6 +452,8 @@ namespace The_Shop
 
         private void Item10Button_Click(object sender, EventArgs e)
         {
+            Product.quantityTmp = int.Parse(Item10Quantity.Text);
+            Product.nameTmp = Item10Label.Text;
             var productForm = new ProductForm();
             productForm.ShowDialog();
             if (productForm.DialogResult == DialogResult.OK)
@@ -457,6 +472,8 @@ namespace The_Shop
 
         private void Item11Button_Click(object sender, EventArgs e)
         {
+            Product.quantityTmp = int.Parse(Item11Quantity.Text);
+            Product.nameTmp = Item11Label.Text;
             var productForm = new ProductForm();
             productForm.ShowDialog();
             if (productForm.DialogResult == DialogResult.OK)
@@ -475,6 +492,8 @@ namespace The_Shop
 
         private void Item12Button_Click(object sender, EventArgs e)
         {
+            Product.quantityTmp = int.Parse(Item12Quantity.Text);
+            Product.nameTmp = Item12Label.Text;
             var productForm = new ProductForm();
             productForm.ShowDialog();
             if (productForm.DialogResult == DialogResult.OK)
@@ -514,6 +533,8 @@ namespace The_Shop
 
         private void Item14Button_Click(object sender, EventArgs e)
         {
+            Product.quantityTmp = int.Parse(Item14Quantity.Text);
+            Product.nameTmp = Item14Label.Text;
             var productForm = new ProductForm();
             productForm.ShowDialog();
             if (productForm.DialogResult == DialogResult.OK)
@@ -532,6 +553,8 @@ namespace The_Shop
 
         private void Item15Button_Click(object sender, EventArgs e)
         {
+            Product.quantityTmp = int.Parse(Item15Quantity.Text);
+            Product.nameTmp = Item15Label.Text;
             var productForm = new ProductForm();
             productForm.ShowDialog();
             if (productForm.DialogResult == DialogResult.OK)
