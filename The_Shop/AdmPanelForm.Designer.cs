@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdmPanelForm));
             this.panel2 = new System.Windows.Forms.Panel();
             this.minimizeButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
@@ -370,7 +371,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.BackgroundImage = global::The_Shop.Properties.Resources.Warehouse;
+            this.tabPage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage2.BackgroundImage")));
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage2.Controls.Add(this.deletePanel);
             this.tabPage2.Controls.Add(this.editPanel);
@@ -411,6 +412,7 @@
             // 
             // deleteNameBox
             // 
+            this.deleteNameBox.Enabled = false;
             this.deleteNameBox.Location = new System.Drawing.Point(31, 33);
             this.deleteNameBox.Name = "deleteNameBox";
             this.deleteNameBox.Size = new System.Drawing.Size(100, 20);
@@ -720,6 +722,7 @@
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdmPanelForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdmPanelForm";
             this.panel2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);

@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationForm));
             this.cancelButton = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.passwordBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.emailBox = new System.Windows.Forms.TextBox();
@@ -57,20 +56,7 @@
             this.cancelButton.TabIndex = 27;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = false;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(88, 235);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(46, 13);
-            this.linkLabel1.TabIndex = 26;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Sign in";
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // passwordBox
             // 
@@ -221,7 +207,6 @@
             this.ClientSize = new System.Drawing.Size(225, 275);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.passwordBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.emailBox);
@@ -244,7 +229,6 @@
         #endregion
 
         private System.Windows.Forms.Button cancelButton;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.TextBox passwordBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox emailBox;

@@ -632,7 +632,7 @@ namespace The_Shop
                         MessageBox.Show("No available product");
                 }
                 else
-                    MessageBox.Show("You don't buy product becouse you are a worker");
+                    MessageBox.Show("Worker can't buy product");
             }
             else
                 MessageBox.Show("Please login to buy");

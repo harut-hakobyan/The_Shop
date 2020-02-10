@@ -1,9 +1,6 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
-using System.Linq;
-using System.Text.RegularExpressions;
-using System.Collections.Generic;
 
 namespace The_Shop
 {

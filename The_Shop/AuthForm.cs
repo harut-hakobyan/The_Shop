@@ -34,6 +34,7 @@ namespace The_Shop
                                 Account.level = mysql_result.GetString(4).ToString();
                                 Account.money = int.Parse(mysql_result.GetString(5).ToString());
                                 Account.id = int.Parse(mysql_result.GetString(6).ToString());
+                                Account.signed = true;
                                 MessageBox.Show($"Account {Account.name} has been signed...");
                                 DialogResult = DialogResult.Yes;
                                 this.Close();
@@ -46,7 +47,8 @@ namespace The_Shop
                             break;
                         }
                     }
-                    MessageBox.Show("Account not found...");
+                    if(Account.signed == false)
+                        MessageBox.Show("Account not found...");
                     mysql_result.Close();
                 }
                 else
