@@ -493,8 +493,11 @@ namespace The_Shop
 
         private void Item13Button_Click(object sender, EventArgs e)
         {
+            Product.quantityTmp = int.Parse(Item13Quantity.Text);
+            Product.nameTmp = Item13Label.Text;
             var productForm = new ProductForm();
             productForm.ShowDialog();
+            
             if (productForm.DialogResult == DialogResult.OK)
             {
                 AddProductSql(13);
@@ -708,9 +711,10 @@ namespace The_Shop
             {
                 Account.signed = true;
                 checkLevel();
+                signButton.Visible = false;
+                registrationButton.Text = "Log out";
             }
-            signButton.Visible = false;
-            registrationButton.Text = "Log out";
+            
         }
 
         private void registrationButton_Click(object sender, EventArgs e)

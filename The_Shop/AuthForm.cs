@@ -74,8 +74,7 @@ namespace The_Shop
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var formm = new WelcomeForm();
-            formm.Show();
+            DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
@@ -86,8 +85,8 @@ namespace The_Shop
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            var formm = new WelcomeForm();
-            formm.Show();
+            DialogResult = DialogResult.Cancel;
+            this.Close();
             this.Close();
         }
         int tmpX, tmpY;

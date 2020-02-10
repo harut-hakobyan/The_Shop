@@ -80,7 +80,7 @@ namespace The_Shop
         {
             if (ProductListBox.SelectedIndex != -1)
             {
-                if (PriceBox.Value > 1 && PriceBox.Value < 100)
+                if (PriceBox.Value >= 1 && PriceBox.Value < 100)
                 {
                     MySqlCommand mysql_query = DbConnector.conn.CreateCommand();
                     mysql_query.CommandText = $"SELECT ID,Name,Quantity,Picture FROM Warehouse WHERE ID = '{idProd}'";
@@ -91,15 +91,28 @@ namespace The_Shop
                         Product.name = mysql_result.GetString(1).ToString();
                         Product.picture = mysql_result.GetString(3).ToString();
                     }
-                    Product.price = (double)PriceBox.Value;
-                    Product.quantity = (int)QuantityBox.Value;
                     mysql_result.Close();
-                    MySqlCommand mysql_query2 = DbConnector.conn.CreateCommand();
-                    mysql_query2.CommandText = $"UPDATE Warehouse SET QUantity = '{countProd - QuantityBox.Value}' WHERE ID = '{idProd}'";
-                    MySqlDataReader mysql_result2;
-                    mysql_result2 = mysql_query2.ExecuteReader();
-                    mysql_result2.Close();
-                    DialogResult = DialogResult.OK;
+                    if (countProd >= QuantityBox.Value)
+                    {
+                        Product.price = (double)PriceBox.Value;
+                        // Product.quantity =
+                        if (Product.nameTmp == Product.name)
+                        {
+
+                            Product.quantity = (int)QuantityBox.Value + Product.quantityTmp;
+                        }
+                        else
+                            Product.quantity = (int)QuantityBox.Value;
+
+                        MySqlCommand mysql_query2 = DbConnector.conn.CreateCommand();
+                        mysql_query2.CommandText = $"UPDATE Warehouse SET QUantity = '{countProd - QuantityBox.Value}' WHERE ID = '{idProd}'";
+                        MySqlDataReader mysql_result2;
+                        mysql_result2 = mysql_query2.ExecuteReader();
+                        mysql_result2.Close();
+                        DialogResult = DialogResult.OK;
+                    }
+                    else
+                        MessageBox.Show("There are not so many products in stock");
                 }
                 else
                     MessageBox.Show("Price must be greater than 0 and smaller than 100");
