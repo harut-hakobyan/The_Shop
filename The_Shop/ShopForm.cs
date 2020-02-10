@@ -61,6 +61,7 @@ namespace The_Shop
             {
                 if (Account.level == "Admin" || Account.level == "Worker")
                 {
+                    AccountingButton.Visible = true;
                     foreach (var item in buttonList)
                         item.Visible = true;
                     foreach (var item in labelList)
@@ -68,7 +69,6 @@ namespace The_Shop
                     if (Account.level == "Admin")
                     {
                         AdmPanelButton.Visible = true;
-                        AccountingButton.Visible = true;
                     }
                     if (Account.level == "Worker")
                         Account.buy = false;
@@ -91,6 +91,9 @@ namespace The_Shop
             List<Label> labelList = new List<Label>();
             Panel[] panelArray = new Panel[6];
             List<Panel> panelList = new List<Panel>();
+            Product.quantityDict.Clear();
+            labelList.Clear();
+            panelList.Clear();
             foreach (var item in Pictures1Panel.Controls)
             {
                 panelList.Add((Panel)item);
@@ -122,16 +125,9 @@ namespace The_Shop
             {
                 if (i > 4)
                 {
-                    try
-                    {
-                        labelList[i + 5].Text = changeProducts()[i - 5].quantity;
-                        Product.quantityDict.Add(counter1, int.Parse(changeProducts()[i - 5].quantity));
-                        counter1++;
-                    }
-                    catch
-                    {
-
-                    }
+                    labelList[i + 5].Text = changeProducts()[i - 5].quantity;
+                    Product.quantityDict.Add(counter1, int.Parse(changeProducts()[i - 5].quantity));
+                    counter1++;
                 }
                 else
                 {
@@ -147,16 +143,9 @@ namespace The_Shop
             {
                 if (i > 4)
                 {
-                    try
-                    {
-                        labelList[i + 5].Text = changeProducts()[i].quantity;
-                        Product.quantityDict.Add(counter1, int.Parse(changeProducts()[i - 5].quantity));
-                        counter1++;
-                    }
-                    catch
-                    {
-
-                    }
+                    labelList[i + 5].Text = changeProducts()[i].quantity;
+                    Product.quantityDict.Add(counter1, int.Parse(changeProducts()[i - 5].quantity));
+                    counter1++;
                 }
                 else
                 {
@@ -173,17 +162,9 @@ namespace The_Shop
                 
                 if (i > 4)
                 {
-                    try
-                    {
-                        labelList[i + 5].Text = changeProducts()[i + 5].quantity;
-                        Product.quantityDict.Add(counter1, int.Parse(changeProducts()[i - 5].quantity));
-                        counter1++;
-                    }
-                    catch
-                    {
-
-                    }
-                    
+                    labelList[i + 5].Text = changeProducts()[i + 5].quantity;
+                    Product.quantityDict.Add(counter1, int.Parse(changeProducts()[i - 5].quantity));
+                    counter1++;
                 }
                 else
                 {
@@ -287,7 +268,7 @@ namespace The_Shop
             mysql_result = mysql_query.ExecuteReader();
             MessageBox.Show("Product deleted");
             mysql_result.Close();
-            shopProductRefresh();
+            //shopProductRefresh();
         }
 
         private void Item2Button_Click(object sender, EventArgs e)
