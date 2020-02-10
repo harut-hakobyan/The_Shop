@@ -3,7 +3,8 @@
 This is a simple shop with all the basic functionalities mentioned in task.
 Run the program by running The_Shop/bin/Debug/The_Shop.exe file.
 
-Note: Program is implemented using C#. You should have at least .Net framework 4.5.2 installed on your computer to run the program.
+Note: Program is implemented using C#. MySql is used as a database management system.
+You should have at least .Net framework 4.5.2 installed on your computer to run the program.
 
 1) Administrator panel (Add, Edit, Remove shop items, Add workers)
 Admin credentials: login - admin@mail.ru , pass - admin
@@ -15,6 +16,7 @@ Note: As an addition to mentioned functionalities in the task, admin is also abl
 
 2) Shop (View items, My Bag)
 Customer credentials: You can register to sign in and shop ;)
+Every customer has 1000$ amount in his/her wallet initially. This is done for proper testing of buying process.
 
 Customer adds the product to shopping basket by clicking on it's icon.
 Then he/she can click on basket icon and see added products, prices per product, summary price, and available money in wallet.
