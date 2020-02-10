@@ -102,8 +102,26 @@ namespace The_Shop
                             Product.quantity = (int)QuantityBox.Value + Product.quantityTmp;
                         }
                         else
+                        {
+                            int quantityTmp = 0;
                             Product.quantity = (int)QuantityBox.Value;
-
+                            ////////////////////////////Select//////////////
+                            MySqlCommand mysql_query3 = DbConnector.conn.CreateCommand();
+                            mysql_query3.CommandText = $"SELECT Quantity FROM Warehouse WHERE Name = '{Product.nameTmp}'";
+                            MySqlDataReader mysql_result3;
+                            mysql_result3 = mysql_query3.ExecuteReader();
+                            while (mysql_result3.Read())
+                            {
+                                quantityTmp = int.Parse(mysql_result3.GetString(0).ToString());
+                            }
+                            mysql_result3.Close();
+                            /////////////////////////////////////////////////
+                            MySqlCommand mysql_query4 = DbConnector.conn.CreateCommand();
+                            mysql_query4.CommandText = $"UPDATE Warehouse SET QUantity = '{quantityTmp+Product.quantityTmp}' WHERE Name = '{Product.nameTmp}'";
+                            MySqlDataReader mysql_result4;
+                            mysql_result4 = mysql_query4.ExecuteReader();
+                            mysql_result4.Close();
+                        }
                         MySqlCommand mysql_query2 = DbConnector.conn.CreateCommand();
                         mysql_query2.CommandText = $"UPDATE Warehouse SET QUantity = '{countProd - QuantityBox.Value}' WHERE ID = '{idProd}'";
                         MySqlDataReader mysql_result2;
