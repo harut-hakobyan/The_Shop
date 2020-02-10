@@ -24,6 +24,8 @@ Program also allows customer to remove product(s) from basket and summary price 
 After buying products, their quantities in shop and money in wallet are being updated.
 
 3) Accounting (Income, Stock)
+Worker credentials: login - john.smith@mail.ru, pass - john123, or you can register a worker from admin profile.
+
 Worker and Admin are able to access accounting form and see
 * Available products in warehouse and their quantities.
 * Summary amount of saled products and earned money.
