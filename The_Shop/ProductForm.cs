@@ -11,13 +11,6 @@ namespace The_Shop
             InitializeComponent();
             try
             {
-                DbConnector.conn.Open();
-            }
-            catch
-            {
-            }
-            try
-            {
                 RefreshList();
             }
             catch
@@ -92,7 +85,6 @@ namespace The_Shop
                     if (countProd >= QuantityBox.Value)
                     {
                         Product.price = (double)PriceBox.Value;
-                        // Product.quantity =
                         if (Product.nameTmp == Product.name)
                         {
 
@@ -171,7 +163,6 @@ namespace The_Shop
                 tmpY = Cursor.Position.Y;
             }
         }
-
         private void panel2_MouseUp(object sender, MouseEventArgs e)
         {
             mousedown = false;

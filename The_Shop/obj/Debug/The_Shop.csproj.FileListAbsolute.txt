@@ -1,5 +1,4 @@
 C:\Users\Мой\source\repos\The_Shop\The_Shop\obj\Debug\The_Shop.csprojAssemblyReference.cache
-C:\Users\Мой\source\repos\The_Shop\The_Shop\obj\Debug\The_Shop.Form1.resources
 C:\Users\Мой\source\repos\The_Shop\The_Shop\obj\Debug\The_Shop.Properties.Resources.resources
 C:\Users\Мой\source\repos\The_Shop\The_Shop\obj\Debug\The_Shop.RegistrationForm.resources
 C:\Users\Мой\source\repos\The_Shop\The_Shop\obj\Debug\The_Shop.csproj.GenerateResource.cache
@@ -16,7 +15,6 @@ C:\Users\Мой\source\repos\The_Shop\The_Shop\obj\Debug\The_Shop.csproj.CopyCom
 C:\Users\Мой\source\repos\The_Shop\The_Shop\obj\Debug\The_Shop.exe
 C:\Users\Мой\source\repos\The_Shop\The_Shop\obj\Debug\The_Shop.pdb
 C:\Users\Мой\source\repos\The_Shop\The_Shop\obj\Debug\The_Shop.AuthForm.resources
-C:\Users\Мой\source\repos\The_Shop\The_Shop\obj\Debug\The_Shop.WelcomeForm.resources
 C:\Users\Мой\source\repos\The_Shop\The_Shop\obj\Debug\The_Shop.ShopForm.resources
 C:\Users\Мой\source\repos\The_Shop\The_Shop\obj\Debug\The_Shop.Resources.Products.resources
 C:\Users\Мой\source\repos\The_Shop\The_Shop\obj\Debug\The_Shop.ProductForm.resources

@@ -65,7 +65,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.editQuantityBox = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.addPanel = new System.Windows.Forms.Panel();
@@ -380,6 +379,8 @@
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.label13);
             this.tabPage2.Controls.Add(this.ProductListBox);
+            this.tabPage2.Controls.Add(this.textBox3);
+            this.tabPage2.Controls.Add(this.button6);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -448,9 +449,6 @@
             this.editPanel.Controls.Add(this.label16);
             this.editPanel.Controls.Add(this.button1);
             this.editPanel.Controls.Add(this.editQuantityBox);
-            this.editPanel.Controls.Add(this.label17);
-            this.editPanel.Controls.Add(this.textBox3);
-            this.editPanel.Controls.Add(this.button6);
             this.editPanel.Location = new System.Drawing.Point(112, 160);
             this.editPanel.Name = "editPanel";
             this.editPanel.Size = new System.Drawing.Size(154, 171);
@@ -513,26 +511,16 @@
             this.editQuantityBox.Size = new System.Drawing.Size(100, 20);
             this.editQuantityBox.TabIndex = 4;
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label17.Location = new System.Drawing.Point(3, 99);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(130, 20);
-            this.label17.TabIndex = 5;
-            this.label17.Text = "Chouse picture";
-            // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(13, 121);
+            this.textBox3.Location = new System.Drawing.Point(400, 293);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 33;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(119, 118);
+            this.button6.Location = new System.Drawing.Point(476, 290);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(24, 23);
             this.button6.TabIndex = 32;
@@ -612,6 +600,7 @@
             // 
             // fileLocationBox
             // 
+            this.fileLocationBox.Enabled = false;
             this.fileLocationBox.Location = new System.Drawing.Point(21, 121);
             this.fileLocationBox.Name = "fileLocationBox";
             this.fileLocationBox.Size = new System.Drawing.Size(100, 20);
@@ -791,7 +780,6 @@
         private System.Windows.Forms.Label editIdLabel;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox editQuantityBox;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel addPanel;

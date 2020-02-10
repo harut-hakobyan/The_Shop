@@ -77,12 +77,6 @@
       <DependentUpon>BasketForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DbConnector.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="PicturesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,12 +110,6 @@
       <DependentUpon>ShopForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ShopProduct.cs" />
-    <Compile Include="WelcomeForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WelcomeForm.Designer.cs">
-      <DependentUpon>WelcomeForm.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="AccountingForm.resx">
       <DependentUpon>AccountingForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,9 +121,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BasketForm.resx">
       <DependentUpon>BasketForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PicturesForm.resx">
       <DependentUpon>PicturesForm.cs</DependentUpon>
@@ -162,9 +147,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ShopForm.resx">
       <DependentUpon>ShopForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WelcomeForm.resx">
-      <DependentUpon>WelcomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

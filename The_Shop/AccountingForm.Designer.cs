@@ -36,7 +36,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.saledProductsLabel = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.moneyLabel = new System.Windows.Forms.Label();
@@ -124,7 +123,6 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.saledProductsLabel);
-            this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.moneyLabel);
@@ -139,22 +137,11 @@
             this.saledProductsLabel.AutoSize = true;
             this.saledProductsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.saledProductsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.saledProductsLabel.Location = new System.Drawing.Point(99, 98);
+            this.saledProductsLabel.Location = new System.Drawing.Point(71, 96);
             this.saledProductsLabel.Name = "saledProductsLabel";
             this.saledProductsLabel.Size = new System.Drawing.Size(21, 24);
             this.saledProductsLabel.TabIndex = 6;
             this.saledProductsLabel.Text = "0";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(1, 98);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 24);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Products";
             // 
             // label4
             // 
@@ -235,7 +222,6 @@
         private System.Windows.Forms.Label moneyLabel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label saledProductsLabel;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
     }
 }

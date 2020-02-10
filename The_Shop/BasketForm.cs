@@ -17,7 +17,6 @@ namespace The_Shop
             moneyLabel.Text = Account.money.ToString() + "$";
             basketListBox.Items.Clear();
             amountLabel.Text = Basket.amount.ToString() + "$";
-            int count = 0;
             foreach (var item in Basket.items)
             {
                 basketListBox.Items.Add(item);
@@ -76,8 +75,6 @@ namespace The_Shop
                             mysql_result3 = mysql_query3.ExecuteReader();
                             mysql_result3.Close();
                         }
-
-
                         Basket.amount = 0;
                         amountLabel.Text = "0";
                         Account.profit = globalAmount;
@@ -89,8 +86,6 @@ namespace The_Shop
             }
             else
                 MessageBox.Show("Please login to buy");
-            
-            
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -122,9 +117,7 @@ namespace The_Shop
                 tmpY = Cursor.Position.Y;
             }
         }
-
         
-
         private void panel2_MouseUp(object sender, MouseEventArgs e)
         {
             mousedown = false;

@@ -82,7 +82,8 @@
             this.Fanta.Name = "Fanta";
             this.Fanta.Size = new System.Drawing.Size(37, 55);
             this.Fanta.TabIndex = 81;
-            this.Fanta.Click += new System.EventHandler(this.Fanta_Click);            // 
+            this.Fanta.Click += new System.EventHandler(this.Fanta_Click);
+            // 
             // Sprite
             // 
             this.Sprite.BackColor = System.Drawing.Color.Transparent;
@@ -93,7 +94,8 @@
             this.Sprite.Name = "Sprite";
             this.Sprite.Size = new System.Drawing.Size(37, 55);
             this.Sprite.TabIndex = 82;
-            this.Sprite.Click += new System.EventHandler(this.Sprite_Click);            // 
+            this.Sprite.Click += new System.EventHandler(this.Sprite_Click);
+            // 
             // Natural
             // 
             this.Natural.BackColor = System.Drawing.Color.Transparent;
@@ -104,7 +106,8 @@
             this.Natural.Name = "Natural";
             this.Natural.Size = new System.Drawing.Size(37, 55);
             this.Natural.TabIndex = 83;
-            this.Natural.Click += new System.EventHandler(this.Natural_Click);            // 
+            this.Natural.Click += new System.EventHandler(this.Natural_Click);
+            // 
             // Orange
             // 
             this.Orange.BackColor = System.Drawing.Color.Transparent;
@@ -115,7 +118,8 @@
             this.Orange.Name = "Orange";
             this.Orange.Size = new System.Drawing.Size(37, 55);
             this.Orange.TabIndex = 88;
-            this.Orange.Click += new System.EventHandler(this.Orange_Click);            // 
+            this.Orange.Click += new System.EventHandler(this.Orange_Click);
+            // 
             // Ananas
             // 
             this.Ananas.BackColor = System.Drawing.Color.Transparent;
@@ -126,7 +130,8 @@
             this.Ananas.Name = "Ananas";
             this.Ananas.Size = new System.Drawing.Size(37, 55);
             this.Ananas.TabIndex = 87;
-            this.Ananas.Click += new System.EventHandler(this.Ananas_Click);            // 
+            this.Ananas.Click += new System.EventHandler(this.Ananas_Click);
+            // 
             // Banan
             // 
             this.Banan.BackColor = System.Drawing.Color.Transparent;
@@ -137,7 +142,8 @@
             this.Banan.Name = "Banan";
             this.Banan.Size = new System.Drawing.Size(37, 55);
             this.Banan.TabIndex = 86;
-            this.Banan.Click += new System.EventHandler(this.Banan_Click);            // 
+            this.Banan.Click += new System.EventHandler(this.Banan_Click);
+            // 
             // Pear
             // 
             this.Pear.BackColor = System.Drawing.Color.Transparent;
@@ -148,7 +154,8 @@
             this.Pear.Name = "Pear";
             this.Pear.Size = new System.Drawing.Size(37, 55);
             this.Pear.TabIndex = 85;
-            this.Pear.Click += new System.EventHandler(this.Pear_Click);            // 
+            this.Pear.Click += new System.EventHandler(this.Pear_Click);
+            // 
             // Apple
             // 
             this.Apple.BackColor = System.Drawing.Color.Transparent;
@@ -159,7 +166,8 @@
             this.Apple.Name = "Apple";
             this.Apple.Size = new System.Drawing.Size(37, 55);
             this.Apple.TabIndex = 84;
-            this.Apple.Click += new System.EventHandler(this.Apple_Click);            // 
+            this.Apple.Click += new System.EventHandler(this.Apple_Click);
+            // 
             // Candy5
             // 
             this.Candy5.BackColor = System.Drawing.Color.Transparent;
@@ -170,7 +178,8 @@
             this.Candy5.Name = "Candy5";
             this.Candy5.Size = new System.Drawing.Size(37, 55);
             this.Candy5.TabIndex = 93;
-            this.Candy5.Click += new System.EventHandler(this.Candy5_Click);            // 
+            this.Candy5.Click += new System.EventHandler(this.Candy5_Click);
+            // 
             // Candy4
             // 
             this.Candy4.BackColor = System.Drawing.Color.Transparent;
@@ -181,7 +190,8 @@
             this.Candy4.Name = "Candy4";
             this.Candy4.Size = new System.Drawing.Size(37, 55);
             this.Candy4.TabIndex = 92;
-            this.Candy4.Click += new System.EventHandler(this.Candy4_Click);            // 
+            this.Candy4.Click += new System.EventHandler(this.Candy4_Click);
+            // 
             // Candy3
             // 
             this.Candy3.BackColor = System.Drawing.Color.Transparent;
@@ -192,7 +202,8 @@
             this.Candy3.Name = "Candy3";
             this.Candy3.Size = new System.Drawing.Size(37, 55);
             this.Candy3.TabIndex = 91;
-            this.Candy3.Click += new System.EventHandler(this.Candy3_Click);            // 
+            this.Candy3.Click += new System.EventHandler(this.Candy3_Click);
+            // 
             // Candy2
             // 
             this.Candy2.BackColor = System.Drawing.Color.Transparent;
@@ -203,7 +214,8 @@
             this.Candy2.Name = "Candy2";
             this.Candy2.Size = new System.Drawing.Size(37, 55);
             this.Candy2.TabIndex = 90;
-            this.Candy2.Click += new System.EventHandler(this.Candy2_Click);            // 
+            this.Candy2.Click += new System.EventHandler(this.Candy2_Click);
+            // 
             // Candy1
             // 
             this.Candy1.BackColor = System.Drawing.Color.Transparent;
@@ -214,7 +226,8 @@
             this.Candy1.Name = "Candy1";
             this.Candy1.Size = new System.Drawing.Size(37, 55);
             this.Candy1.TabIndex = 89;
-            this.Candy1.Click += new System.EventHandler(this.Candy1_Click);            // 
+            this.Candy1.Click += new System.EventHandler(this.Candy1_Click);
+            // 
             // okButton
             // 
             this.okButton.Location = new System.Drawing.Point(55, 231);
@@ -257,6 +270,7 @@
             this.Controls.Add(this.Apple);
             this.Controls.Add(this.Jermuk);
             this.Name = "PicturesForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PicturesForm";
             this.ResumeLayout(false);
 

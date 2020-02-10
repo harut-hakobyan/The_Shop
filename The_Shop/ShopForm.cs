@@ -210,8 +210,6 @@ namespace The_Shop
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var formm = new WelcomeForm();
-            formm.Show();
             this.Close();
         }
 
@@ -268,7 +266,6 @@ namespace The_Shop
             mysql_result = mysql_query.ExecuteReader();
             MessageBox.Show("Product deleted");
             mysql_result.Close();
-            //shopProductRefresh();
         }
 
         private void Item2Button_Click(object sender, EventArgs e)

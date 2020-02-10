@@ -12,13 +12,6 @@ namespace The_Shop
             InitializeComponent();
             try
             {
-                DbConnector.conn.Open();
-            }
-            catch
-            {
-            }
-            try
-            {
                 RefreshList("Workers");
                 RefreshList("Warehouse");
             }
@@ -118,35 +111,23 @@ namespace The_Shop
             {
                 fileLocationBox.Text = Product.picture;
             }
-            
         }
 
         private void AddProductButton_Click(object sender, EventArgs e)
         {
-            //if (Correct())
-            //{
+            if (ProductNameBox.Text != "" && ProductQuantityBox.Text != "" && int.Parse(ProductQuantityBox.Text) > 0 && fileLocationBox.Text!="")
+            {
                 string query = $"INSERT INTO Warehouse (Name,Quantity,Picture) VALUES ('{ProductNameBox.Text}','{ProductQuantityBox.Text}','{fileLocationBox.Text}')";
                 MySqlScript script = new MySqlScript(DbConnector.conn, query);
                 int count = script.Execute();
                 MessageBox.Show("Product added");
+                ProductNameBox.Text = "";
+                ProductQuantityBox.Text = "";
+                fileLocationBox.Text = "";
                 RefreshList("Warehouse");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Fill out all of the required fields correctly");
-            //}
-            /////////////////////Picture/////////////////////////////////////
-            //string sourceFile = fileLocationBox.Text;
-            //string destinationFile = @"C:\Temp\Data\MaheshTXCopied.txt";
-            //try
-            //{
-            //    File.Copy(sourceFile, destinationFile, true);
-            //}
-            //catch
-            //{
-            //    MessageBox.Show("Can't copy a picture file");
-            //}
-            //////////////////////////////////////////////////////////////////////
+            }
+            else
+                MessageBox.Show("Please fill all the fields");
         }
         static int idProd;
         static string nameProd;
@@ -155,7 +136,6 @@ namespace The_Shop
         {
             editNameBox.Enabled = true;
             editQuantityBox.Enabled = true;
-            deleteNameBox.Enabled = true;
             string textString = ProductListBox.SelectedItem.ToString();
             string idText = textString.Substring(0, 2);
             int id = int.Parse(idText);
@@ -191,7 +171,6 @@ namespace The_Shop
             }
 
         }
-
         private void editRadio_CheckedChanged(object sender, EventArgs e)
         {
             editPanel.Visible = true;
@@ -199,7 +178,6 @@ namespace The_Shop
             deletePanel.Visible = false;
             boxLock("Edit");
         }
-
         private void addRadio_CheckedChanged(object sender, EventArgs e)
         {
             editPanel.Visible = false;
@@ -219,7 +197,7 @@ namespace The_Shop
         {
             if (editNameBox.Text != "")
             {
-                if (editNameBox.Text != nameProd || editQuantityBox.Text != quantityProd)
+                if (editNameBox.Text != nameProd || editQuantityBox.Text != quantityProd && int.Parse(editQuantityBox.Text) >0)
                 {
                     MySqlCommand mysql_query = DbConnector.conn.CreateCommand();
                     mysql_query.CommandText = $"UPDATE Warehouse SET Name = '{editNameBox.Text}',Quantity = '{editQuantityBox.Text}' WHERE ID = '{idProd}'";

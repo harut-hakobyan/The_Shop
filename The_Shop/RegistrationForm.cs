@@ -34,7 +34,6 @@ namespace The_Shop
                 return true;
             else
                 return false;
-
         }
         private bool Bussy()
         {

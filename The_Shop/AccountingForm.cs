@@ -10,13 +10,6 @@ namespace The_Shop
             InitializeComponent();
             try
             {
-                DbConnector.conn.Open();
-            }
-            catch
-            {
-            }
-            try
-            {
                 RefreshList();
             }
             catch
