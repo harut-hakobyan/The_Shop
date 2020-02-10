@@ -54,42 +54,55 @@ namespace The_Shop
         }
         private void buyButton_Click(object sender, EventArgs e)
         {
-            if (basketListBox.Items.Count != 0)
+            if (Account.signed == true)
             {
-                Account.saledProducts += basketListBox.Items.Count;
-                basketListBox.Items.Clear();
-                Account.money -= Basket.amount;
-                moneyLabel.Text = Account.money.ToString() + "$";
-                Basket.items.Clear();
-                MySqlCommand mysql_query = DbConnector.conn.CreateCommand();
-                mysql_query.CommandText = $"UPDATE Persons SET Money = '{Account.money}' WHERE ID = '{Account.id}'";
-                MySqlDataReader mysql_result;
-                mysql_result = mysql_query.ExecuteReader();
-                mysql_result.Close();
-                Basket.count = 0;
-                int globalAmount = Account.profit + Basket.amount;
-                MySqlCommand mysql_query2 = DbConnector.conn.CreateCommand();
-                mysql_query2.CommandText = $"UPDATE Profit SET Value = '{globalAmount}' WHERE ID = '1';UPDATE Profit SET Value = '{Account.saledProducts}' WHERE ID = '2'";
-                MySqlDataReader mysql_result2;
-                mysql_result2 = mysql_query2.ExecuteReader();
-                mysql_result2.Close();
-                MySqlCommand mysql_query3 = DbConnector.conn.CreateCommand();
-                for (int i = 1; i < 16; i++)
+                if (basketListBox.Items.Count != 0)
                 {
-                    mysql_query3.CommandText = $"UPDATE Products SET Quantity = '{Product.quantityDict[i]}' WHERE ID = '{i}'";
-                    MySqlDataReader mysql_result3;
-                    mysql_result3 = mysql_query3.ExecuteReader();
-                    mysql_result3.Close();
+                    if (Account.money < Basket.amount)
+                    {
+                        MessageBox.Show("No enought money");
+                    }
+                    else
+                    {
+                        Account.saledProducts += basketListBox.Items.Count;
+                        basketListBox.Items.Clear();
+                        Account.money -= Basket.amount;
+                        moneyLabel.Text = Account.money.ToString() + "$";
+                        Basket.items.Clear();
+                        MySqlCommand mysql_query = DbConnector.conn.CreateCommand();
+                        mysql_query.CommandText = $"UPDATE Persons SET Money = '{Account.money}' WHERE ID = '{Account.id}'";
+                        MySqlDataReader mysql_result;
+                        mysql_result = mysql_query.ExecuteReader();
+                        mysql_result.Close();
+                        Basket.count = 0;
+                        int globalAmount = Account.profit + Basket.amount;
+                        MySqlCommand mysql_query2 = DbConnector.conn.CreateCommand();
+                        mysql_query2.CommandText = $"UPDATE Profit SET Value = '{globalAmount}' WHERE ID = '1';UPDATE Profit SET Value = '{Account.saledProducts}' WHERE ID = '2'";
+                        MySqlDataReader mysql_result2;
+                        mysql_result2 = mysql_query2.ExecuteReader();
+                        mysql_result2.Close();
+                        MySqlCommand mysql_query3 = DbConnector.conn.CreateCommand();
+                        for (int i = 1; i < 16; i++)
+                        {
+                            mysql_query3.CommandText = $"UPDATE Products SET Quantity = '{Product.quantityDict[i]}' WHERE ID = '{i}'";
+                            MySqlDataReader mysql_result3;
+                            mysql_result3 = mysql_query3.ExecuteReader();
+                            mysql_result3.Close();
+                        }
+
+
+                        Basket.amount = 0;
+                        amountLabel.Text = "0";
+                        Account.profit = globalAmount;
+                        MessageBox.Show("Product's buyed");
+                    }
                 }
-
-
-                Basket.amount = 0;
-                amountLabel.Text = "0";
-                Account.profit = globalAmount;
-                MessageBox.Show("Product's buyed");
+                else
+                    MessageBox.Show("Basket is empty");
             }
             else
-                MessageBox.Show("Basket is empty");
+                MessageBox.Show("Please login to buy");
+            
             
         }
         private void button3_Click(object sender, EventArgs e)

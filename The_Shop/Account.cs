@@ -17,5 +17,6 @@ namespace The_Shop
         public static string level;
         public static int money;
         public static bool buy = true;
+        public static bool signed = false;
     }
 }

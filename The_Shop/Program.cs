@@ -16,7 +16,7 @@ namespace The_Shop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new WelcomeForm());
+            Application.Run(new ShopForm());
         }
     }
 }

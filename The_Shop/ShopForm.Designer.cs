@@ -122,6 +122,8 @@
             this.Pictures2Panel = new System.Windows.Forms.Panel();
             this.Pictures3Panel = new System.Windows.Forms.Panel();
             this.basketCountLabel = new System.Windows.Forms.Label();
+            this.signButton = new System.Windows.Forms.Button();
+            this.registrationButton = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BasketPictureBox)).BeginInit();
             this.panel3.SuspendLayout();
@@ -138,8 +140,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.registrationButton);
+            this.panel2.Controls.Add(this.signButton);
             this.panel2.Controls.Add(this.AdmPanelButton);
             this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.AccountingButton);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -1281,7 +1286,7 @@
             this.AccountingButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AccountingButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AccountingButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AccountingButton.Location = new System.Drawing.Point(4, 18);
+            this.AccountingButton.Location = new System.Drawing.Point(90, -3);
             this.AccountingButton.Name = "AccountingButton";
             this.AccountingButton.Size = new System.Drawing.Size(88, 23);
             this.AccountingButton.TabIndex = 3;
@@ -1381,6 +1386,34 @@
             this.basketCountLabel.TabIndex = 96;
             this.basketCountLabel.Text = "0";
             // 
+            // signButton
+            // 
+            this.signButton.BackgroundImage = global::The_Shop.Properties.Resources.AddEditButton1;
+            this.signButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.signButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.signButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.signButton.Location = new System.Drawing.Point(169, -3);
+            this.signButton.Name = "signButton";
+            this.signButton.Size = new System.Drawing.Size(88, 23);
+            this.signButton.TabIndex = 3;
+            this.signButton.Text = "Sign";
+            this.signButton.UseVisualStyleBackColor = true;
+            this.signButton.Click += new System.EventHandler(this.signButton_Click);
+            // 
+            // registrationButton
+            // 
+            this.registrationButton.BackgroundImage = global::The_Shop.Properties.Resources.AddEditButton1;
+            this.registrationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.registrationButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.registrationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.registrationButton.Location = new System.Drawing.Point(252, -3);
+            this.registrationButton.Name = "registrationButton";
+            this.registrationButton.Size = new System.Drawing.Size(88, 23);
+            this.registrationButton.TabIndex = 4;
+            this.registrationButton.Text = "Registration";
+            this.registrationButton.UseVisualStyleBackColor = true;
+            this.registrationButton.Click += new System.EventHandler(this.registrationButton_Click);
+            // 
             // ShopForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1392,7 +1425,6 @@
             this.Controls.Add(this.Pictures3Panel);
             this.Controls.Add(this.Pictures2Panel);
             this.Controls.Add(this.Pictures1Panel);
-            this.Controls.Add(this.AccountingButton);
             this.Controls.Add(this.Item15Button);
             this.Controls.Add(this.Item14Button);
             this.Controls.Add(this.Item12Button);
@@ -1537,5 +1569,7 @@
         private System.Windows.Forms.Label Item12Quantity;
         private System.Windows.Forms.Label Item11Quantity;
         public System.Windows.Forms.Label basketCountLabel;
+        private System.Windows.Forms.Button registrationButton;
+        private System.Windows.Forms.Button signButton;
     }
 }

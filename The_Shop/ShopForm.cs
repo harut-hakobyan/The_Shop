@@ -11,14 +11,20 @@ namespace The_Shop
         public ShopForm()
         {
             InitializeComponent();
-            //try
-            //{
+            try
+            {
+                DbConnector.conn.Open();
+            }
+            catch
+            {
+                MessageBox.Show("Can't connect to server...");
+                this.Close();
+            }
             shopProductRefresh();
-
-            checkLevel();
         }
         private void checkLevel()
         {
+            
             List<Button> buttonList = new List<Button>();
             buttonList.Add(Item1Button);
             buttonList.Add(Item2Button);
@@ -51,26 +57,43 @@ namespace The_Shop
             labelList.Add(Item13Quantity);
             labelList.Add(Item14Quantity);
             labelList.Add(Item15Quantity);
-            if (Account.level == "Admin" || Account.level == "Worker")
+            if (Account.signed == true)
+            {
+                if (Account.level == "Admin" || Account.level == "Worker")
+                {
+                    foreach (var item in buttonList)
+                    {
+                        item.Visible = true;
+                    }
+                    foreach (var item in labelList)
+                    {
+                        item.Visible = true;
+                    }
+                    if (Account.level == "Admin")
+                    {
+                        AdmPanelButton.Visible = true;
+                        AccountingButton.Visible = true;
+                    }
+                    if (Account.level == "Worker")
+                    {
+                        Account.buy = false;
+                    }
+                }
+            }
+            else
             {
                 foreach (var item in buttonList)
                 {
-                    item.Visible = true;
+                    item.Visible = false;
                 }
                 foreach (var item in labelList)
                 {
-                    item.Visible = true;
+                    item.Visible = false;
                 }
-                if (Account.level == "Admin")
-                {
-                    AdmPanelButton.Visible = true;
-                    AccountingButton.Visible = true;
-                }
-                if (Account.level == "Worker")
-                {
-                    Account.buy = false;
-                }
+                AdmPanelButton.Visible = false;
+                AccountingButton.Visible = false;
             }
+            
         }
         private void shopProductRefresh()
         {
@@ -584,27 +607,32 @@ namespace The_Shop
         }
         private void selectProduct(Label label, Label price,Label quantity,int key)
         {
-            if (Account.buy == true)
+            if (Account.signed == true)
             {
-                int tmp3 = int.Parse(quantity.Text);
-                if (tmp3 != 0)
+                if (Account.buy == true)
                 {
-                    Basket.count++;
-                    basketCountLabel.Text = Basket.count.ToString();
-                    Basket.items.Add(label.Text + " " + price.Text);
-                    string tmp = price.Text;
-                    string tmp2 = tmp.Substring(0, tmp.Length - 1);
-                    Basket.amount += int.Parse(tmp2);
+                    int tmp3 = int.Parse(quantity.Text);
+                    if (tmp3 != 0)
+                    {
+                        Basket.count++;
+                        basketCountLabel.Text = Basket.count.ToString();
+                        Basket.items.Add(label.Text + " " + price.Text);
+                        string tmp = price.Text;
+                        string tmp2 = tmp.Substring(0, tmp.Length - 1);
+                        Basket.amount += int.Parse(tmp2);
 
-                    tmp3--;
-                    quantity.Text = tmp3.ToString();
-                    Product.quantityDict[key] = tmp3;
+                        tmp3--;
+                        quantity.Text = tmp3.ToString();
+                        Product.quantityDict[key] = tmp3;
+                    }
+                    else
+                        MessageBox.Show("No available product");
                 }
                 else
-                    MessageBox.Show("No available product");
+                    MessageBox.Show("You don't buy product becouse you are a worker");
             }
             else
-                MessageBox.Show("You don't buy product becouse you are a worker");
+                MessageBox.Show("Please login to buy");
         }
 
         private void item3_Click(object sender, EventArgs e)
@@ -670,6 +698,36 @@ namespace The_Shop
         private void item3_5_Click(object sender, EventArgs e)
         {
             selectProduct(Item15Label, Item15Price, Item15Quantity,15);
+        }
+
+        private void signButton_Click(object sender, EventArgs e)
+        {
+            var authForm = new AuthForm();
+            authForm.ShowDialog();
+            if (authForm.DialogResult == DialogResult.Yes)
+            {
+                Account.signed = true;
+                checkLevel();
+            }
+            signButton.Visible = false;
+            registrationButton.Text = "Log out";
+        }
+
+        private void registrationButton_Click(object sender, EventArgs e)
+        {
+            if (Account.signed == true)
+            {
+                Account.signed = false;
+                signButton.Visible = true;
+                registrationButton.Text = "Registration";
+                checkLevel();
+                MessageBox.Show("Your account has been logged out");
+            }
+            else
+            {
+                var registrtionForm = new RegistrationForm();
+                registrtionForm.ShowDialog();
+            }
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)

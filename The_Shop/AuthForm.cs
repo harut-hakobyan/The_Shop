@@ -10,15 +10,6 @@ namespace The_Shop
         public AuthForm()
         {
             InitializeComponent();
-            try
-            {
-                DbConnector.conn.Open();
-            }
-            catch
-            {
-                MessageBox.Show("Can't connect to server...");
-                this.Close();
-            }
         }
 
         private void SignButton_Click_1(object sender, EventArgs e)
@@ -44,9 +35,7 @@ namespace The_Shop
                                 Account.money = int.Parse(mysql_result.GetString(5).ToString());
                                 Account.id = int.Parse(mysql_result.GetString(6).ToString());
                                 MessageBox.Show($"Account {Account.name} has been signed...");
-                                mysql_result.Close();
-                                var ShForm = new ShopForm();
-                                ShForm.Show();
+                                DialogResult = DialogResult.Yes;
                                 this.Close();
                             }
                             else
