@@ -65,6 +65,7 @@
             this.passwordBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.passwordBox.Location = new System.Drawing.Point(60, 170);
             this.passwordBox.Name = "passwordBox";
+            this.passwordBox.PasswordChar = '*';
             this.passwordBox.Size = new System.Drawing.Size(100, 20);
             this.passwordBox.TabIndex = 22;
             // 

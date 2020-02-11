@@ -23,14 +23,14 @@ namespace The_Shop
                     this.Close();
                 }
                 else
-                    MessageBox.Show("Email address ");
+                    MessageBox.Show("Email address already in use");
             }
             else
                 MessageBox.Show("Fill out all of the required fields correctly");
         }
         private bool Correct()
         {
-            if (nameBox.Text.Length > 4 && emailBox.Text.Length > 9 && passwordBox.Text.Length > 6 && surnameBox.Text.Length > 2)
+            if (nameBox.Text.Length > 1 && emailBox.Text.Length > 5 && passwordBox.Text.Length > 3 && surnameBox.Text.Length > 1)
                 return true;
             else
                 return false;
