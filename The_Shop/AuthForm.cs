@@ -18,6 +18,7 @@ namespace The_Shop
             {
                 if (passwordBox.Text != "")
                 {
+                    bool pass = false;
                     MySqlCommand mysql_query = DbConnector.conn.CreateCommand();
                     mysql_query.CommandText = $"SELECT Name,Surname,Email,Password,Level,Money,ID FROM Persons";
                     MySqlDataReader mysql_result;
@@ -26,6 +27,7 @@ namespace The_Shop
                     {
                         if (EmailBox.Text == mysql_result.GetString(2).ToString())
                         {
+                            pass = true;
                             if (passwordBox.Text == mysql_result.GetString(3).ToString())
                             {
                                 Account.name = mysql_result.GetString(0).ToString();
@@ -47,9 +49,10 @@ namespace The_Shop
                             break;
                         }
                     }
-                    if(Account.signed == false)
+                    if(Account.signed == false &&  pass != true)
                         MessageBox.Show("Account not found...");
                     mysql_result.Close();
+                    pass = false;
                 }
                 else
                 {

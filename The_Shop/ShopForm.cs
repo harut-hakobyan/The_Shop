@@ -75,6 +75,8 @@ namespace The_Shop
                     else
                         Account.buy = true;
                 }
+                else
+                    Account.buy = true;
             }
             else
             {
